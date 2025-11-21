@@ -1,0 +1,169 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Gender {
+  male
+  female
+  unisex
+}
+
+model AccessoryDetail {
+  id              Int           @id @default(autoincrement())
+  itemId          String        @unique
+  length          Float?
+  carBrand        String?
+  extraInfo       String?
+  accessoryTypeId Int
+  AccessoryType   AccessoryType @relation(fields: [accessoryTypeId], references: [id])
+  Item            Item          @relation(fields: [itemId], references: [id], onDelete: Cascade)
+}
+
+model AccessoryType {
+  name_en         String
+  name_ro         String
+  name_ru         String
+  name_ukr        String
+  imageURL        String?
+  id              Int               @id @default(autoincrement())
+  AccessoryDetail AccessoryDetail[]
+}
+
+model Brand {
+  name_ro String @unique(map: "Brand_name_key")
+  id      Int    @id @default(autoincrement())
+  Item    Item[]
+}
+
+model CartItem {
+  id         String   @id
+  customerId String
+  itemId     String
+  quantity   Int
+  subtotal   Decimal
+  Customer   Customer @relation(fields: [customerId], references: [id])
+  Item       Item     @relation(fields: [itemId], references: [id])
+}
+
+model Color {
+  name_en  String
+  name_ro  String
+  name_ru  String
+  name_ukr String
+  imageURL String
+  id       Int    @id @default(autoincrement())
+  Item     Item[]
+}
+
+model Customer {
+  id        String     @id
+  name      String
+  phone     String     @unique
+  comment   String?
+  active    Boolean    @default(true)
+  createdAt DateTime   @default(now())
+  CartItem  CartItem[]
+}
+
+model Item {
+  id                 String           @id
+  brandCode          String
+  displayCode        String           @unique
+  price              Decimal
+  gender             Gender
+  isFeatured         Boolean?         @default(false)
+  isNew              Boolean?         @default(false)
+  weight             Float            @default(0)
+  width              Float            @default(0)
+  height             Float            @default(0)
+  depth              Float            @default(0)
+  hidden             Boolean          @default(false)
+  available          Boolean          @default(true)
+  reserved           Boolean          @default(false)
+  onSale             Boolean          @default(false)
+  pricePurchase      Decimal          @default(0)
+  priceSale          Decimal          @default(0)
+  images             String[]
+  info               String           @default("")
+  about              String           @default("")
+  tags               Tag[]
+  brandId            Int
+  colorId            Int
+  typeId             Int
+  materialId         Int
+  AccessoryDetail    AccessoryDetail?
+  CartItem           CartItem[]
+  Brand              Brand            @relation(fields: [brandId], references: [id])
+  Color              Color            @relation(fields: [colorId], references: [id])
+  Material           Material         @relation(fields: [materialId], references: [id])
+  ItemType           ItemType         @relation(fields: [typeId], references: [id])
+  description_ro     String           @default("")
+  description_en     String           @default("")
+  description_ru     String           @default("")
+  description_ukr    String           @default("")
+  productDetails_ro  String[]         @default([])
+  productDetails_en  String[]         @default([])
+  productDetails_ru  String[]         @default([])
+  productDetails_ukr String[]         @default([])
+  createdAt          DateTime         @default(now())
+
+  @@index([brandId])
+  @@index([colorId])
+  @@index([typeId])
+}
+
+model ItemType {
+  name_en  String
+  name_ro  String
+  name_ru  String
+  name_ukr String
+  id       Int    @id @default(autoincrement())
+  Item     Item[]
+}
+
+model Material {
+  name_en  String
+  name_ro  String
+  name_ru  String
+  name_ukr String
+  id       Int    @id @default(autoincrement())
+  Item     Item[]
+}
+
+model Tag {
+  name_en  String
+  name_ro  String
+  name_ru  String
+  name_ukr String
+  imageURL String
+  id       Int    @id @default(autoincrement())
+  items    Item[]
+}
+
+model User {
+  id            String    @id
+  email         String    @unique
+  password      String
+  role          String    @default("admin")
+  emailVerified DateTime?
+  image         String?
+  name          String?
+}
+
+model Sales {
+  id       Int    @id @default(autoincrement())
+  name_en  String
+  name_ro  String
+  name_ru  String
+  name_ukr String
+}
+
+model Hero {
+  id      Int      @id @default(autoincrement())
+  content String[]
+}

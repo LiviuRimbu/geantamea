@@ -1,0 +1,92 @@
+{
+  "infobar": {
+    "sales": "SUPER SALE UP TO 40% OFF",
+    "shop-link": "SHOP NOW",
+    "delivery": "FREE DELIVERY IN CHISINAU"
+  },
+  "navbar": {
+    "women": {
+      "label": "Women",
+      "categories": {
+        "bags": {
+          "label": "Bags",
+          "handbag": "Handbags",
+          "clutch": "Clutches",
+          "backpack": "Backpacks"
+        },
+        "wallets": {
+          "label": "Wallets"
+        },
+        "popularColors": {
+          "label": "Popular Colors"
+        },
+        "accessories": {
+          "label": "Accessories",
+          "Keychains": "Keychains",
+          "DocumentHolder": "Document holder",
+          "CarKeychains": "Car keychains",
+          "CosmeticBag": "Cosmetic bag"
+        }
+      }
+    },
+    "men": {
+      "label": "Men",
+      "categories": {
+        "bags": {
+          "label": "Bags",
+          "handbag": "Handbags",
+          "clutch": "Clutches",
+          "backpack": "Backpacks"
+        },
+        "wallets": {
+          "label": "Wallets"
+        },
+        "popularColors": {
+          "label": "Popular Colors"
+        },
+        "accessories": {
+          "label": "Accessories",
+          "Keychains": "Keychains",
+          "DocumentHolder": "Document holder",
+          "CarKeychains": "Car keychains"
+        }
+      }
+    },
+    "accessories": {
+      "label": "Accessories",
+      "categories": {
+        "label": "Accessories",
+        "Keychains": "Keychains",
+        "DocumentHolder": "Document holders",
+        "CarKeychains": "Car keychains"
+      }
+    },
+    "sale": {
+      "label": "Sale",
+      "categories": {
+        "info": "info"
+      }
+    },
+    "gift": {
+      "label": "Gift",
+      "categories": {
+        "info": "Info About Gift"
+      }
+    }
+  },
+  "cart": {
+    "label": "Cart",
+    "empty": "Your cart is empty",
+    "total": "Total"
+  },
+  "new-arrival-section": {
+    "label": "New arrival",
+    "btn-part1": "All",
+    "btn-part2": "bags & accessories "
+  },
+  "categories-grid": {
+    "women": "women",
+    "men": "men",
+    "accessories": "accessories"
+  }
+}

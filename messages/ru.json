@@ -1,0 +1,92 @@
+{
+  "infobar": {
+    "sales": "СУПЕР СКИДКИ ДО 40%",
+    "shop-link": "Смотреть товары",
+    "delivery": "БЕСПЛАТНАЯ ДОСТАВКА ПО КИШИНЁВУ"
+  },
+  "navbar": {
+    "women": {
+      "label": "женские",
+      "categories": {
+        "bags": {
+          "label": "Сумки",
+          "handbag": "Сумочки",
+          "clutch": "Клатчи",
+          "backpack": "Рюкзаки"
+        },
+        "wallets": {
+          "label": "Кошельки"
+        },
+        "popularColors": {
+          "label": "Популярные цвета"
+        },
+        "accessories": {
+          "label": "Аксессуары",
+          "Keychains": "Брелоки",
+          "DocumentHolder": "Папка для документов",
+          "CarKeychains": "Брелоки для авто",
+          "CosmeticBag": "Косметичка"
+        }
+      }
+    },
+    "men": {
+      "label": "мужские",
+      "categories": {
+        "bags": {
+          "label": "Сумки",
+          "handbag": "Сумки",
+          "clutch": "Клатчи",
+          "backpack": "Рюкзаки"
+        },
+        "wallets": {
+          "label": "Кошельки"
+        },
+        "popularColors": {
+          "label": "Популярные цвета"
+        },
+        "accessories": {
+          "label": "Аксессуары",
+          "Keychains": "Брелоки",
+          "DocumentHolder": "Папка для документов",
+          "CarKeychains": "Брелоки для авто"
+        }
+      }
+    },
+    "accessories": {
+      "label": "Аксессуары",
+      "categories": {
+        "label": "Аксессуары",
+        "Keychains": "Брелоки",
+        "DocumentHolder": "Папки для документов",
+        "CarKeychains": "Брелоки для авто"
+      }
+    },
+    "sale": {
+      "label": "скидки",
+      "categories": {
+        "info": "info"
+      }
+    },
+    "gift": {
+      "label": "подарки",
+      "categories": {
+        "info": "Info About GiftRU"
+      }
+    }
+  },
+  "cart": {
+    "label": "Корзина",
+    "empty": "Ваша корзина пуста",
+    "total": "Итого"
+  },
+  "new-arrival-section": {
+    "label": "Новинки",
+    "btn-part1": "",
+    "btn-part2": "сумки и аксессуары"
+  },
+  "categories-grid": {
+    "women": "женские",
+    "men": "мужские",
+    "accessories": "Аксессуары"
+  }
+}

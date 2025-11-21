@@ -1,0 +1,92 @@
+{
+  "infobar": {
+    "sales": "SUPER REDUCERI PÂNĂ LA 40%",
+    "shop-link": "Vezi produsele",
+    "delivery": "LIVRARE GRATUITĂ ÎN CHIȘINĂU"
+  },
+  "navbar": {
+    "women": {
+      "label": "Dame",
+      "categories": {
+        "bags": {
+          "label": "Genți",
+          "handbag": "Poșete",
+          "clutch": "Clutch-uri",
+          "backpack": "Rucsacuri"
+        },
+        "wallets": {
+          "label": "Portmonee"
+        },
+        "popularColors": {
+          "label": "Culori populare"
+        },
+        "accessories": {
+          "label": "Accesorii",
+          "Keychains": "Portchei",
+          "DocumentHolder": "Port-documente",
+          "CarKeychains": "Portchei auto",
+          "CosmeticBag": "Cosmetieră"
+        }
+      }
+    },
+    "men": {
+      "label": "Bărbați",
+      "categories": {
+        "bags": {
+          "label": "Genți",
+          "handbag": "Genți",
+          "clutch": "Clutch-uri",
+          "backpack": "Rucsacuri"
+        },
+        "wallets": {
+          "label": "Portmonee"
+        },
+        "popularColors": {
+          "label": "Culori populare"
+        },
+        "accessories": {
+          "label": "Accesorii",
+          "Keychains": "Portchei",
+          "DocumentHolder": "Port-documente",
+          "CarKeychains": "Portchei auto"
+        }
+      }
+    },
+    "accessories": {
+      "label": "Accesorii",
+      "categories": {
+        "label": "Accesorii",
+        "Keychains": "Portchei",
+        "DocumentHolder": "Port-documente",
+        "CarKeychains": "Portchei auto"
+      }
+    },
+    "sale": {
+      "label": "reduceri",
+      "categories": {
+        "info": "infoRO"
+      }
+    },
+    "gift": {
+      "label": "cadouri",
+      "categories": {
+        "info": "Info About GiftRO"
+      }
+    }
+  },
+  "cart": {
+    "label": "Coș",
+    "empty": "Coșul tău este gol",
+    "total": "Total"
+  },
+  "new-arrival-section": {
+    "label": "Produse noi",
+    "btn-part1": "Genți și accesorii",
+    "btn-part2": ""
+  },
+  "categories-grid": {
+    "women": "dame",
+    "men": "Bărbați",
+    "accessories": "Accesorii"
+  }
+}
