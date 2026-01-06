@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import { TextElement } from "@/shared/ui/text-element";
 import { ChevronUp, ChevronDown } from "lucide-react";
@@ -38,6 +39,7 @@ const Dropdown = ({
 }: DropdownMenuProps) => {
   const isMobile = useIsMobile();
   const isImage = values.some((option) => option.imageUrl);
+  const pathname = usePathname();
 
   return (
     <div className="relative inline-block text-center ">
@@ -86,7 +88,6 @@ const Dropdown = ({
             })()
           : name}
       </Button>
-
       {/* Dropdown menu with effect */}
       <EffectWrapper
         isVisible={dropdownOpen}
@@ -110,6 +111,12 @@ const Dropdown = ({
                 e.stopPropagation();
                 onChange(String(item.value));
                 setDropdownOpen(false);
+                const newPath = pathname.replace(
+                  /^\/[a-zA-Z-]+/,
+                  `/${item.value}`,
+                );
+                document.body.style.opacity = "0.9";
+                window.location.href = newPath;
               }}
             >
               {item.imageUrl && (

@@ -3964,6 +3964,11 @@ next@14.2.0:
     "@next/swc-win32-ia32-msvc" "14.2.0"
     "@next/swc-win32-x64-msvc" "14.2.0"
 
+node-bin-setup@^1.0.0:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/node-bin-setup/-/node-bin-setup-1.1.4.tgz#e5a666044152b54d8d84b95297977ae07fd04047"
+  integrity sha512-vWNHOne0ZUavArqPP5LJta50+S8R261Fr5SvGul37HbEDcowvLjwdvd0ZeSr0r2lTSrPxl6okq9QUw8BFGiAxA==
+
 node-domexception@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/node-domexception/-/node-domexception-1.0.0.tgz#6888db46a1f71c0b76b3f7555016b63fe64766e5"
@@ -3987,6 +3992,13 @@ node-releases@^2.0.19:
   version "2.0.19"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.19.tgz#9e445a52950951ec4d177d843af370b411caf314"
   integrity sha512-xxOWJsBKtzAq7DY0J+DTzuz58K8e7sJbdgwkbMWQe8UYB6ekmsQ45q0M/tJDsGaZmbC+l7n57UV8Hl5tHxO9uw==
+
+node@^20.19.6:
+  version "20.19.6"
+  resolved "https://registry.yarnpkg.com/node/-/node-20.19.6.tgz#ee38d72a9f0da2047cc445e52d0b846ed50368dc"
+  integrity sha512-EDRH8t/R6cBUGCXA+MMQ4fSafg/jDPltwL7RWDODKj7O/vAZXOO8w5GA3sIQp0wQnmxQlgApJUYzEjs5MGu9Zg==
+  dependencies:
+    node-bin-setup "^1.0.0"
 
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"

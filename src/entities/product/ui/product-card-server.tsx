@@ -17,6 +17,7 @@ export const ProductCardServer = ({ id, item }: ProductCardProps) => {
   return (
     <div key={id} className="relative max-w-[200px] md:max-w-[300px]">
       <div className=" aspect-[3/4] relative w-[200px]  h-auto  md:w-[300px] md:h-[400px] overflow-hidden group ">
+        <ProductCardClient item={item} />
         <Image
           src={thumbImages[0]}
           width={1300}
@@ -25,7 +26,7 @@ export const ProductCardServer = ({ id, item }: ProductCardProps) => {
           alt="New arrival product"
           sizes="(max-width: 768px) 45vw, 300px"
           quality={60}
-          className="w-full h-full object-cover hover:opacity-0 transition-transform  duration-500"
+          className="w-full h-full object-cover hover:opacity-0 transition-transform  duration-10"
         />
         <Image
           src={thumbImages[1]}
@@ -35,7 +36,7 @@ export const ProductCardServer = ({ id, item }: ProductCardProps) => {
           alt="New arrival product"
           sizes="(max-width: 768px) 45vw, 300px"
           quality={60}
-          className="absolute top-0 left-0 w-full h-full object-cover opacity-0 scale-100 transition-all duration-2000 z-[150] delay-500
+          className="absolute top-0 left-0 w-full h-full object-cover opacity-0 scale-100 transition-all duration-200 z-[150] delay-10
               group-hover:opacity-100 hover:scale-105 "
         />
       </div>
@@ -52,7 +53,7 @@ export const ProductCardServer = ({ id, item }: ProductCardProps) => {
         </div>
         {/*<TextElement variant="description">price LEI</TextElement>*/}
       </div>
-      <ProductCardClient item={item} />
+
       {/*</EffectWrapper>*/}
     </div>
   );

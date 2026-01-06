@@ -15,7 +15,7 @@ interface HeroSectionClientProps {
 export const HeroSectionClient = ({ heroContent }: HeroSectionClientProps) => {
   const t = useTranslations();
 
-  const contentSwitchTimer = 14000; // Timer value
+  const contentSwitchTimer = 14000;
 
   const [contentIndex, setContentIndex] = useState<number>(0);
 
@@ -49,19 +49,30 @@ export const HeroSectionClient = ({ heroContent }: HeroSectionClientProps) => {
       <FadeSwap triggerKey={contentIndex} duration={500}>
         <div className="w-full h-full ">
           <div className="flex w-full h-full">
-            {heroContent[contentIndex].endsWith("mp4") ? (
-              <video
-                autoPlay
-                loop={heroContent.length === 1}
-                preload="none"
-                muted
-                playsInline
-                src={heroContent[contentIndex]}
-                className="absolute w-full h-full object-cover"
-              />
+            {heroContent.length > 0 ? (
+              heroContent[contentIndex].endsWith("mp4") ? (
+                <video
+                  autoPlay
+                  loop={heroContent.length === 1}
+                  preload="none"
+                  muted
+                  playsInline
+                  src={heroContent[contentIndex]}
+                  className="absolute w-full h-full object-cover"
+                />
+              ) : (
+                <Image
+                  src={heroContent[contentIndex]}
+                  alt={`H`}
+                  priority={contentIndex === 0}
+                  fill
+                  // // sizes="100vw"
+                  className="animate-kenburns"
+                />
+              )
             ) : (
               <Image
-                src={heroContent[contentIndex]}
+                src={"/RTP.jpg"}
                 alt={`H`}
                 priority={contentIndex === 0}
                 fill

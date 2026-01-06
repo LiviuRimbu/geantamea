@@ -30,6 +30,8 @@ export const NewArrivalsClient = ({ newArrivals }: NewArrivalsClientProps) => {
     setVisible(false);
   }, [buttonPressed]);
 
+  console.log(newArrivals, "NewArrivals");
+
   const genderMap = {
     women: "female",
     men: "male",

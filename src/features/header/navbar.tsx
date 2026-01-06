@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 import { LangSwitcher } from "@/features/header/lang-switcher";
 import { NavLinks } from "@/features/header/nav-links";
@@ -20,7 +21,9 @@ export const Navbar = () => {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  const changeColor = dropdownOpen || scrolled;
+
+  const path = usePathname();
+  const changeColor = dropdownOpen || scrolled || path.length > 5;
 
   return (
     <nav

@@ -15,7 +15,6 @@ interface CartProductCardProps {
 
 export const CartProductCard = ({ id, cartItem }: CartProductCardProps) => {
   const removeItem = useCartStore((state) => state.removeItem);
-  // console.log("cart item", cartItem);
   return (
     <div key={id} className=" relative flex items-start w-full  mt-5">
       <div className=" relative w-[120px] h-[120px] md:w-[135px] md:h-[135px] flex-shrink-0 overflow-hidden  bg-gray-100 ">

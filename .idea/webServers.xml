@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="89bf1343-e39c-418c-beb2-e8cfffda0177" name="VPS">
+        <fileTransfer rootFolder="/home/liviu/apps/geantamea/geantamea" accessType="SFTP" host="gw.md.bsensus.net" port="3108" sshConfigId="9f68ef52-9f63-41fb-be80-d8369a273c92" sshConfig="liviu@gw.md.bsensus.net:3108 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" isUseRsync="true" isUseSudo="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -11,6 +11,5 @@ export default async function NewArrivalsSection() {
   if (!res.ok) throw new Error("Failed to fetch new arrivals");
 
   const newArrivals: Item[] = await res.json();
-
   return <NewArrivalsClient newArrivals={newArrivals} />;
 }

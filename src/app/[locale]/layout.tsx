@@ -1,7 +1,7 @@
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
-
 import { routing } from "@/i18n/routing";
+
 import { Navbar } from "@/features/header/navbar";
 import { InfoBar } from "@/features/header/info-bar";
 // import {Header} from "@/features/header/header";
@@ -20,7 +20,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body>
+      <body className="bg-[#efefef]">
         <NextIntlClientProvider locale={locale}>
           {/*<Header />*/}
           <InfoBar />

@@ -30,19 +30,19 @@ export const ProductCardClient = ({ id, item }: ProductCardClient) => {
   };
   return (
     <div
-      className="absolute top-0 left-0 w-full h-full  bg-transparent cursor-pointer transform z-[100]"
+      className="absolute top-0 left-0 w-full h-full bg-transparent cursor-pointer transform z-[200]"
       onMouseEnter={() => {
         setIsHovered(true);
       }}
       onMouseLeave={() => setIsHovered(false)}
     >
       <Button
-        className=" absolute bg-white text-black p-0 aspect-square right-[5%] top-[5%] z-[101] rounded-none group"
+        className="absolute bg-white text-black p-0 aspect-square right-[5%] top-[5%] z-[900]  h-[10%] rounded-none group/btn"
         onClick={() => {
           addItem(cartItem);
         }}
       >
-        <div className="group-hover:rotate-90 transition-transform duration-300 ease-out">
+        <div className="group-hover/btn:rotate-90 transition-transform duration-300 ease-out">
           <PlusIcon />
         </div>
       </Button>
