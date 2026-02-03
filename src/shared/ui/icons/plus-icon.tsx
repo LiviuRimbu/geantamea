@@ -21,7 +21,7 @@ export const PlusIcon = ({
       y2="28"
       stroke={color}
       strokeWidth={strokeWidth}
-      strokeLinecap="butt" // 👈 flat ends
+      strokeLinecap="butt"
     />
     <line
       x1="4"

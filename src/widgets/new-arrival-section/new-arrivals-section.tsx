@@ -2,14 +2,22 @@ import React from "react";
 
 import { NewArrivalsClient } from "@/widgets/new-arrival-section";
 import { Item } from "@/shared/types/product-types";
+import { prisma } from "@/shared/lib/prisma";
 
 export default async function NewArrivalsSection() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/new-arrivals`,
-  );
-
-  if (!res.ok) throw new Error("Failed to fetch new arrivals");
-
-  const newArrivals: Item[] = await res.json();
+  const newArrivals: Item = await prisma.item.findMany({
+    where: {
+      isNew: true,
+      hidden: false,
+      available: true,
+      gender: { in: ["female", "male"] },
+    },
+    orderBy: {
+      createdAt: "desc",
+    },
+    take: 15,
+  });
+  // const newArrivals = newArr;
+  console.log(newArrivals, "NewArrrrrrirgklajdfg;klajcfbgklpjrn");
   return <NewArrivalsClient newArrivals={newArrivals} />;
 }

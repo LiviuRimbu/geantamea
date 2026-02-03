@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-import { giftMenu } from "@/config/menus/menus";
+import { giftMenu } from "@/shared/config/menus/menus";
 import { TextElement } from "@/shared/ui/text-element";
 import { Button } from "@/shared/ui/shadcn/button";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft } from "@/shared/ui/icons";
 import React from "react";
 import {
   Accordion,
@@ -16,7 +16,9 @@ import {
 type GiftMenuMobileProps = {
   setSelectedCategory: React.Dispatch<React.SetStateAction<string | null>>;
 };
-const GiftMenuMobile = ({ setSelectedCategory }: GiftMenuMobileProps) => {
+export const GiftMenuMobile = ({
+  setSelectedCategory,
+}: GiftMenuMobileProps) => {
   const t = useTranslations();
   return (
     <div className="flex h-full flex-col justify-start ml-5  overflow-y-auto overflow-x-hidden">
@@ -61,5 +63,3 @@ const GiftMenuMobile = ({ setSelectedCategory }: GiftMenuMobileProps) => {
     </div>
   );
 };
-
-export default GiftMenuMobile;

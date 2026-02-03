@@ -10,13 +10,13 @@ export const InfoBar = () => {
   // const isMobile = useIsMobile();
   const { message: currentMessage, fade } = useTextRotator(messages, 4000);
   return (
-    <div>
-      <div className="hidden md:flex w-full bg-[#1c1c1c] min-h-navbar h-navbar px-8 md:px-11 items-center border-b-5 justify-between -mb-[1px]">
+    <div className="w-full flex bg-[#1c1c1c] justify-center px-8 md:px-11 ">
+      <div className="hidden md:flex max-w-[1380px] w-full  min-h-navbar h-navbar  items-center border-b-5 justify-between -mb-[1px]">
         <div className="flex items-center justify-start leading-none h-full">
           <TextElement variant="descriptionWhite" component="span">
             {t("infobar.sales")}
           </TextElement>
-          <Link href="/sale" passHref className="hidden sm:inline-block ml-2">
+          <Link href="/" passHref className="hidden sm:inline-block ml-2">
             <TextElement
               variant="descriptionWhite"
               component="h1"

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 import { TextElement } from "@/shared/ui/text-element";
-import { ChevronUp, ChevronDown } from "lucide-react";
+import { ChevronUp, ChevronDown } from "@/shared/ui/icons";
 import { useIsMobile } from "@/shared/hooks/use-is-mobile";
 import { Button } from "@/shared/ui/shadcn/button";
 import { EffectWrapper } from "@/shared/ui/framer-motion/effect-wrapper";

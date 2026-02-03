@@ -6,12 +6,14 @@ type FillingButtonProps = {
   className?: string;
   color: "white" | "black";
   children: React.ReactNode;
+  onClick?: () => void;
 };
 
 export const FillingButton = ({
   className = "",
   color,
   children,
+  onClick,
 }: FillingButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const [animationCompleted, setAnimationCompleted] = useState(false);
@@ -58,7 +60,6 @@ export const FillingButton = ({
   };
 
   const getInitialPosition = () => {
-    // If coming back from left, start from left side
     return animationCompleted && !isHovered ? { left: 0 } : { right: 0 };
   };
 
@@ -68,6 +69,7 @@ export const FillingButton = ({
       className={`relative overflow-hidden min-w-[120px] min-h-[50px] rounded-none px-6 py-3 ${baseBg} ${textColor} ${className}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick}
     >
       <span
         className={`${bgColor}`}

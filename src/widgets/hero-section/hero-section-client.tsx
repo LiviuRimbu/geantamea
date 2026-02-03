@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 
 import { FillingButton } from "@/shared/ui/filling-button";
@@ -27,7 +27,7 @@ export const HeroSectionClient = ({ heroContent }: HeroSectionClientProps) => {
   }, []);
 
   return (
-    <div className="relative w-full h-[600px] overflow-hidden bg-black">
+    <div className="relative w-screen h-[600px] overflow-hidden bg-black -mt-navbar -mx-containerX lg:-mx-containerXlg">
       {/* Text */}
       <div className=" absolute border-2 border-white top-1/2 left-1/2 h-[340px] w-[340px] lg:w-[435px] -translate-x-1/2 -translate-y-1/2 z-[10] gap-4 flex flex-col items-center justify-center">
         <TextElement variant="descriptionWhite">New collection</TextElement>

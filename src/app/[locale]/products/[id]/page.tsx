@@ -1,22 +1,14 @@
-import { Item } from "@/shared/types";
-import { ProductPageClient } from "@/entities/product/ui";
+import { ProductPage } from "@/pages/product";
+import { Locale } from "@/shared/types";
 
-type ProductPageProps = {
+type PageProps = {
   params: {
-    locale: string;
+    locale: Locale;
     id: string;
   };
 };
 
-export default async function ProductPage({ params }: ProductPageProps) {
+export default async function Page({ params }: PageProps) {
   const { id, locale } = params;
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/products/${id}`,
-  );
-
-  if (!res.ok) throw new Error("Failed to fetch new arrivals");
-
-  const item: Item = await res.json();
-
-  return <ProductPageClient item={item} />;
+  return <ProductPage id={id} locale={locale} />;
 }

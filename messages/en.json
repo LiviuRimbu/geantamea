@@ -88,5 +88,9 @@
     "women": "women",
     "men": "men",
     "accessories": "accessories"
+  },
+  "product-page": {
+    "add-to-cart": "Add to cart",
+    "proceed": "Finalize Order"
   }
 }

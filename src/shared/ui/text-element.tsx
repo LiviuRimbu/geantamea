@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@/lib/utils";
+import { cn } from "@/shared/lib/utils";
 
 const textElementVariants = cva(
   " leading-[5rem]  tracking-[0.125rem]  word-space text-center whitespace-nowrap",

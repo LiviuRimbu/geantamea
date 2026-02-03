@@ -1,16 +1,15 @@
 "use client";
 
-import { useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { useScrollLock } from "@/shared/hooks/use-scroll-lock";
 
-import { CartProductCard } from "@/entities/product/ui/cart-product-card";
+import { CartProductCard } from "./cart-product-card";
 import { Button } from "@/shared/ui/shadcn/button";
 import { TextElement } from "@/shared/ui/text-element";
 import { CartIcon } from "@/shared/ui/icons/cart-icon";
-import { X } from "lucide-react";
+import { X } from "@/shared/ui/icons";
 
-import { useCartStore } from "@/shared/store/use-cart-store";
+import { useCartStore } from "../model/use-cart-store";
 
 type CartProps = {
   changeColor: boolean;

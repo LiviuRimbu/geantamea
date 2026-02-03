@@ -5,16 +5,11 @@ import { useTranslations } from "next-intl";
 
 import { TextElement } from "@/shared/ui/text-element";
 import { UnderlineButton } from "@/shared/ui/underline-button";
-import { ProductCardServer } from "@/entities/product/ui/product-card-server";
+import { ProductCardServer } from "@/entities/product/product-card/product-card-server";
 import { ScrollableRow } from "@/shared/ui/scrollable-row";
 import { FillingButton } from "@/shared/ui/filling-button";
-import { getNewArrivals } from "@/shared/api/new-arrivals/get-new-arrivals";
-import { EffectWrapper } from "@/shared/ui/framer-motion/effect-wrapper";
 
 import { Item } from "@/shared/types/product-types";
-import NewArrivalsSection from "@/widgets/new-arrival-section/new-arrivals-section";
-import { ProductCardClient } from "@/entities/product/ui/product-card-client";
-import { FadeInWrapper } from "@/shared/ui/fade-in-wrapper";
 import { FadeSwap } from "@/shared/ui/fade-swap";
 
 interface NewArrivalsClientProps {
@@ -24,13 +19,12 @@ interface NewArrivalsClientProps {
 export const NewArrivalsClient = ({ newArrivals }: NewArrivalsClientProps) => {
   const t = useTranslations();
   const [buttonPressed, setButtonPressed] = useState<string>("women");
+  // console.log(newArrivals, "NewArrrrri");
 
   const [visible, setVisible] = useState(true);
   useEffect(() => {
     setVisible(false);
   }, [buttonPressed]);
-
-  console.log(newArrivals, "NewArrivals");
 
   const genderMap = {
     women: "female",

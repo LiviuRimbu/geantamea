@@ -5,7 +5,7 @@ import { useScrollLock } from "@/shared/hooks/use-scroll-lock";
 
 import { useTranslations } from "next-intl";
 import { TextElement } from "@/shared/ui/text-element";
-import { menus } from "@/config/menus/menus";
+import { menus } from "@/shared/config/menus/menus";
 import {
   WomenMenuDesktop,
   MenMenuDesktop,

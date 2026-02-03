@@ -75,7 +75,7 @@
     }
   },
   "cart": {
-    "label": "Coș",
+    "label": "Comanda mea",
     "empty": "Coșul tău este gol",
     "total": "Total"
   },
@@ -88,5 +88,9 @@
     "women": "dame",
     "men": "Bărbați",
     "accessories": "Accesorii"
+  },
+  "product-page": {
+    "add-to-cart": "Adaugă în coș",
+    "proceed": "Finalizează comanda"
   }
 }

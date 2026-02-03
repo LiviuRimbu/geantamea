@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-import { accessoriesMenu } from "@/config/menus/menus";
+import { accessoriesMenu } from "@/shared/config/menus/menus";
 import { TextElement } from "@/shared/ui/text-element";
 import { Button } from "@/shared/ui/shadcn/button";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft } from "@/shared/ui/icons";
 import React from "react";
 import {
   Accordion,
@@ -16,7 +16,7 @@ import {
 type AccessoriesMenuMobileProps = {
   setSelectedCategory: React.Dispatch<React.SetStateAction<string | null>>;
 };
-const AccessoriesMenuMobile = ({
+export const AccessoriesMenuMobile = ({
   setSelectedCategory,
 }: AccessoriesMenuMobileProps) => {
   const t = useTranslations();
@@ -62,5 +62,3 @@ const AccessoriesMenuMobile = ({
     </div>
   );
 };
-
-export default AccessoriesMenuMobile;

@@ -1,13 +1,17 @@
 import { HeroSectionClient } from "@/widgets/hero-section/hero-section-client";
+import { prisma } from "@/shared/lib/prisma";
 
 export default async function HeroSection() {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/ui/hero-section`,
-  );
+  try {
+    const hero = await prisma.hero.findMany({
+      select: { content: true },
+    });
 
-  if (!res.ok) throw new Error("Failed to fetch hero-section content");
+    const heroContent = hero.map((item) => item.content).flat();
 
-  const heroContent: string[] = await res.json();
-
-  return <HeroSectionClient heroContent={heroContent} />;
+    return <HeroSectionClient heroContent={heroContent} />;
+  } catch (error) {
+    console.error("Failed to fetch hero content:", error);
+    return null;
+  }
 }

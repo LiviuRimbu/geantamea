@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-import { menMenu } from "@/config/menus/menus";
+import { menMenu } from "@/shared/config/menus/menus";
 import { TextElement } from "@/shared/ui/text-element";
 import { Button } from "@/shared/ui/shadcn/button";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft } from "@/shared/ui/icons";
 import React from "react";
 import {
   Accordion,
@@ -16,7 +16,7 @@ import {
 type MenMenuMobileProps = {
   setSelectedCategory: React.Dispatch<React.SetStateAction<string | null>>;
 };
-const MenMenuMobile = ({ setSelectedCategory }: MenMenuMobileProps) => {
+export const MenMenuMobile = ({ setSelectedCategory }: MenMenuMobileProps) => {
   const t = useTranslations();
   return (
     <div className="flex h-full flex-col justify-start ml-5  overflow-y-auto overflow-x-hidden">
@@ -60,5 +60,3 @@ const MenMenuMobile = ({ setSelectedCategory }: MenMenuMobileProps) => {
     </div>
   );
 };
-
-export default MenMenuMobile;

@@ -22,6 +22,9 @@ module.exports = {
       spacing: {
         "wide-words": "50rem",
         navbar: "60px",
+        containerX: "2.25rem",
+        containerXlg: "2.75rem",
+        containerYtop: "3rem",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -89,7 +92,6 @@ module.exports = {
           to: { height: "0" },
         },
 
-        // 🔥 Ken Burns animations
         "kenburns-zoom-in": {
           "0%": { transform: "scale(1)" },
           "100%": { transform: "scale(1.1)" },
@@ -118,6 +120,14 @@ module.exports = {
         ".word-space-wide": { "word-spacing": "4em" },
         ".word-space-huge": { "word-spacing": "8em" },
         ".debug-border": { border: "5px solid red" },
+
+        ".scrollbar-hide": {
+          "-ms-overflow-style": "none",
+          "scrollbar-width": "none",
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+        },
       });
     },
     require("tailwindcss-animate"),

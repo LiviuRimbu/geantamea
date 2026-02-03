@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-import { giftMenu } from "@/config/menus/menus";
+import { giftMenu } from "@/shared/config/menus/menus";
 import { TextElement } from "@/shared/ui/text-element";
 
-const GiftMenuDesktop = () => {
+export const GiftMenuDesktop = () => {
   const t = useTranslations();
   return (
     <div className="flex flex-col items-start">
@@ -41,5 +41,3 @@ const GiftMenuDesktop = () => {
     </div>
   );
 };
-
-export default GiftMenuDesktop;

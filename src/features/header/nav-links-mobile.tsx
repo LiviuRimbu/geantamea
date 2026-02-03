@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import { Button } from "@/shared/ui/shadcn/button";
 import { LangSwitcher } from "@/features/header/lang-switcher";
 import { useScrollLock } from "@/shared/hooks/use-scroll-lock";
 import { TextElement } from "@/shared/ui/text-element";
-import { X, ChevronRight } from "lucide-react";
-import { menus } from "@/config/menus/menus";
+import { X, ChevronRight } from "@/shared/ui/icons";
+import { menus } from "@/shared/config/menus/menus";
 import { useTranslations } from "next-intl";
 import {
   AccessoriesMenuMobile,

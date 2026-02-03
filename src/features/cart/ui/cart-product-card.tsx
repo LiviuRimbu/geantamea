@@ -1,11 +1,10 @@
-import { useState } from "react";
 import Image from "next/image";
 
 import { TextElement } from "@/shared/ui/text-element";
 import { Button } from "@/shared/ui/shadcn";
 
-import { useCartStore } from "@/shared/store/use-cart-store";
-import { CartItem } from "@/shared/types/";
+import { useCartStore } from "@/features/cart";
+import { CartItem } from "@/shared/types";
 import { TrashIcon } from "@/shared/ui/icons/trash-icon";
 
 interface CartProductCardProps {

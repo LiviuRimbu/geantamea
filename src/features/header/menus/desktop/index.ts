@@ -1,5 +1,5 @@
-export { default as WomenMenuDesktop } from "./women-menu-desktop";
-export { default as MenMenuDesktop } from "./men-menu-desktop";
-export { default as AccessoriesMenuDesktop } from "./accessories-menu-desktop";
-export { default as SaleMenuDesktop } from "./sale-menu-desktop";
-export { default as GiftMenuDesktop } from "./gift-menu-desktop";
+export { WomenMenuDesktop } from "./women-menu-desktop";
+export { MenMenuDesktop } from "./men-menu-desktop";
+export { AccessoriesMenuDesktop } from "./accessories-menu-desktop";
+export { SaleMenuDesktop } from "./sale-menu-desktop";
+export { GiftMenuDesktop } from "./gift-menu-desktop";

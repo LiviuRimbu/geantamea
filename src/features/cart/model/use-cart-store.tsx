@@ -3,41 +3,30 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 import { CartItem } from "@/shared/types/";
-import CryptoJS from "crypto-js";
 
-const NEXT_PUBLIC_KEY = process.env.NEXT_PUBLIC_KEY!;
-
-//LS encrypting
-const secureStorage = {
+const encodedStorage = {
   getItem: (name: string): string | null => {
     try {
-      const encrypted = localStorage.getItem(name);
-      if (!encrypted) return null;
-      const bytes = CryptoJS.AES.decrypt(encrypted, NEXT_PUBLIC_KEY);
-      const decrypted = bytes.toString(CryptoJS.enc.Utf8);
-      return decrypted; // persist middleware will parse this JSON string
+      const encoded = localStorage.getItem(name);
+      if (!encoded) return null;
+      return atob(encoded);
     } catch (err) {
-      console.error("Decryption failed:", err);
+      console.error("Decoding failed:", err);
       return null;
     }
   },
   setItem: (name: string, value: string): void => {
     try {
-      const jsonString =
-        typeof value === "string" ? value : JSON.stringify(value);
-      const encrypted = CryptoJS.AES.encrypt(
-        jsonString,
-        NEXT_PUBLIC_KEY,
-      ).toString();
-      localStorage.setItem(name, encrypted);
+      const encoded = btoa(value);
+      localStorage.setItem(name, encoded);
     } catch (err) {
-      console.error("Encryption failed:", err);
+      console.error("Encoding failed:", err);
     }
   },
   removeItem: (name: string): void => localStorage.removeItem(name),
 };
 
-//  Store
+// Store
 interface CartState {
   items: CartItem[];
   isOpen: boolean;
@@ -84,7 +73,7 @@ export const useCartStore = create<CartState>()(
     }),
     {
       name: "crtstrg",
-      storage: createJSONStorage(() => secureStorage),
+      storage: createJSONStorage(() => encodedStorage),
       partialize: (state) => ({ items: state.items }),
     },
   ),
