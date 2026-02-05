@@ -1,13 +1,14 @@
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 
-import { Item } from "@/shared/types";
+import { ProductItem } from "@/shared/types/product-card-types";
 import { ProductCardClient } from "@/entities/product";
-import { Link } from "@/shared/i18n/navigation";
+
 import { TextElement } from "@/shared/ui/text-element";
 
 interface ProductCardProps {
   id?: string;
-  item: Item;
+  item: ProductItem;
 }
 
 export const ProductCardServer = ({ id, item }: ProductCardProps) => {

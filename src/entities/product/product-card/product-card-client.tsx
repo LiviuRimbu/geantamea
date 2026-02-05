@@ -6,25 +6,18 @@ import { Button } from "@/shared/ui/shadcn";
 import { PlusIcon } from "@/shared/ui/icons/plus-icon";
 import { useCartStore } from "@/features/cart";
 
-import { Item } from "@/shared/types";
+import { ProductItem } from "@/shared/types/product-card-types";
 
 interface ProductCardClient {
   id?: string;
-  item: Item;
+  item: ProductItem;
 }
 
 export const ProductCardClient = ({ item }: ProductCardClient) => {
   // const thumbImages = item.images.filter((img) => img.includes("thumb"));
-  const [isHovered, setIsHovered] = useState(false);
+  const [_isHovered, setIsHovered] = useState(false);
   const addItem = useCartStore((state) => state.addItem);
-  // console.log(item, "item");
-  const cartItem = {
-    id: item.id,
-    typeId: item.typeId,
-    price: item.price,
-    brandId: item.brandId,
-    image: item.images[0],
-  };
+
   return (
     <div
       className="absolute top-0 left-0 w-full h-full bg-transparent cursor-pointer transform z-[200]"
@@ -38,7 +31,7 @@ export const ProductCardClient = ({ item }: ProductCardClient) => {
         onClick={(e) => {
           e.preventDefault();
           e.stopPropagation();
-          addItem(cartItem);
+          addItem(item);
         }}
       >
         <div className="group-hover/btn:rotate-90 transition-transform duration-300 ease-out">

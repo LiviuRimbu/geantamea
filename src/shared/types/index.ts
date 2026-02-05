@@ -1,4 +1,4 @@
-export type { CartItem } from "./cart-product-types";
+export type { ProductItem } from "./product-card-types";
 export type {
   Brand,
   Color,

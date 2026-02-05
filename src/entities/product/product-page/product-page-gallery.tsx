@@ -28,7 +28,7 @@ export const ProductPageGallery = ({
   const [thumbApi, setThumbApi] = useState<CarouselApi>();
   const [activeIndex, setActiveIndex] = useState(0);
 
-  console.log(sortedImages, "Imagesssss");
+  // console.log(sortedImages, "Imagesssss");
 
   useEffect(() => {
     if (!mainApi) return;

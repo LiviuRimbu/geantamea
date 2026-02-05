@@ -13,18 +13,11 @@ interface ProductPageInfoProps {
 
 export const ProductPageInfo = ({ item, locale }: ProductPageInfoProps) => {
   const t = useTranslations("product-page");
-  const cartItem = {
-    id: item.id,
-    typeId: item.typeId,
-    price: item.price,
-    brandId: item.brandId,
-    image: item.images[0],
-  };
+
   const items = useCartStore((s) => s.items);
   const isInCart = items.some((i) => i.id === item.id);
   const addItem = useCartStore((state) => state.addItem);
-  // console.log(isInCart, " Isin CARTTTTTTTTTT!!!!!!!!!!!");
-  // console.log(item, "Item from info");
+
   return (
     <div className="lg:sticky lg:top-navbar lg:self-start w-full lg:max-w-md p-4 flex flex-col">
       <TextElement variant="title" className="text-left mb-2">
@@ -57,7 +50,7 @@ export const ProductPageInfo = ({ item, locale }: ProductPageInfoProps) => {
           <FillingButton
             color="black"
             onClick={() => {
-              addItem(cartItem);
+              addItem(item);
             }}
             className="w-[90%]"
           >
@@ -67,7 +60,7 @@ export const ProductPageInfo = ({ item, locale }: ProductPageInfoProps) => {
           <FillingButton
             color="black"
             onClick={() => {
-              addItem(cartItem);
+              addItem(item);
             }}
             className="w-[90%]"
           >

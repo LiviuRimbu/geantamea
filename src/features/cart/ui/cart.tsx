@@ -3,13 +3,13 @@
 import { useTranslations } from "next-intl";
 import { useScrollLock } from "@/shared/hooks/use-scroll-lock";
 
-import { CartProductCard } from "./cart-product-card";
+import { CartProductCard } from "@/features/cart";
 import { Button } from "@/shared/ui/shadcn/button";
 import { TextElement } from "@/shared/ui/text-element";
 import { CartIcon } from "@/shared/ui/icons/cart-icon";
 import { X } from "@/shared/ui/icons";
 
-import { useCartStore } from "../model/use-cart-store";
+import { useCartStore } from "@/features/cart";
 
 type CartProps = {
   changeColor: boolean;
@@ -23,6 +23,8 @@ export const Cart = ({ changeColor }: CartProps) => {
   const cartTotal = useCartStore((state) => state.getTotalPrice);
   const t = useTranslations();
   useScrollLock(isOpen);
+
+  console.log(cartItems, "cartITEMSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS");
 
   return (
     <div className="ml-3">
@@ -70,7 +72,7 @@ export const Cart = ({ changeColor }: CartProps) => {
         >
           {cartItems.length > 0 ? (
             <div className=" my-5 w-full">
-              {cartItems.map((cartItem, index) => (
+              {cartItems.map((cartItem) => (
                 <CartProductCard key={cartItem.id} cartItem={cartItem} />
               ))}
             </div>

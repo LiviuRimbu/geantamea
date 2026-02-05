@@ -9,11 +9,11 @@ import { ProductCardServer } from "@/entities/product/product-card/product-card-
 import { ScrollableRow } from "@/shared/ui/scrollable-row";
 import { FillingButton } from "@/shared/ui/filling-button";
 
-import { Item } from "@/shared/types/product-types";
+import { ProductItem } from "@/shared/types/product-card-types";
 import { FadeSwap } from "@/shared/ui/fade-swap";
 
 interface NewArrivalsClientProps {
-  newArrivals: Item[];
+  newArrivals: ProductItem[];
 }
 
 export const NewArrivalsClient = ({ newArrivals }: NewArrivalsClientProps) => {
@@ -21,7 +21,7 @@ export const NewArrivalsClient = ({ newArrivals }: NewArrivalsClientProps) => {
   const [buttonPressed, setButtonPressed] = useState<string>("women");
   // console.log(newArrivals, "NewArrrrri");
 
-  const [visible, setVisible] = useState(true);
+  const [_visible, setVisible] = useState(true);
   useEffect(() => {
     setVisible(false);
   }, [buttonPressed]);

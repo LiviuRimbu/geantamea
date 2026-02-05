@@ -2,7 +2,7 @@
 
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-import { CartItem } from "@/shared/types/";
+import { ProductItem } from "@/shared/types/";
 
 const encodedStorage = {
   getItem: (name: string): string | null => {
@@ -28,10 +28,10 @@ const encodedStorage = {
 
 // Store
 interface CartState {
-  items: CartItem[];
+  items: ProductItem[];
   isOpen: boolean;
 
-  addItem: (item: CartItem) => void;
+  addItem: (item: ProductItem) => void;
   removeItem: (id: string) => void;
   clearCart: () => void;
   getTotalPrice: () => number;

@@ -22,7 +22,7 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const path = usePathname();
+  const path = usePathname() || "/";
   const changeColor = dropdownOpen || scrolled || path.length > 5;
 
   return (

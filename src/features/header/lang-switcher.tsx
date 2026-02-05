@@ -1,5 +1,5 @@
 import { usePathname } from "next/navigation";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { useLocale } from "next-intl";
 
 import Dropdown from "@/shared/ui/dropdown";
@@ -15,8 +15,6 @@ export const LangSwitcher = ({
   setDropdownOpen,
   changeColor,
 }: NavbarActionsProps) => {
-  const isMounted = useRef(false);
-
   const dropdownMenuOptions = [
     { label: "EN", value: "EN" },
     { label: "RO", value: "RO" },
@@ -24,13 +22,11 @@ export const LangSwitcher = ({
     { label: "UKR", value: "UKR" },
   ];
 
-  const pathname = usePathname();
-  const testString = "/ro/products/2345";
-  // const currentLocale = pathname.split("/")[1];
+  const pathname = usePathname() || "/";
+
   const currentLocale = useLocale();
 
-  const [selectedLang, setSelectedLang] = useState(pathname.substring(1, 4));
-
+  const [_selectedLang, setSelectedLang] = useState(pathname.substring(1, 4));
   return (
     <div className="">
       <Dropdown

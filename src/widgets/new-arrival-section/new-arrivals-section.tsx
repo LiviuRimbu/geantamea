@@ -1,11 +1,10 @@
 import React from "react";
 
 import { NewArrivalsClient } from "@/widgets/new-arrival-section";
-import { Item } from "@/shared/types/product-types";
 import { prisma } from "@/shared/lib/prisma";
 
 export default async function NewArrivalsSection() {
-  const newArrivals: Item = await prisma.item.findMany({
+  const newArrivals = await prisma.item.findMany({
     where: {
       isNew: true,
       hidden: false,
@@ -16,8 +15,33 @@ export default async function NewArrivalsSection() {
       createdAt: "desc",
     },
     take: 15,
+    select: {
+      id: true,
+      images: true,
+      price: true,
+      Brand: {
+        select: {
+          id: true,
+          name_ro: true,
+        },
+      },
+      ItemType: {
+        select: {
+          id: true,
+          name_ro: true,
+          name_en: true,
+          name_ru: true,
+          name_ukr: true,
+        },
+      },
+      gender: true,
+    },
   });
-  // const newArrivals = newArr;
-  console.log(newArrivals, "NewArrrrrrirgklajdfg;klajcfbgklpjrn");
-  return <NewArrivalsClient newArrivals={newArrivals} />;
+
+  const formattedArrivals = newArrivals.map((item) => ({
+    ...item,
+    price: item.price.toNumber(),
+  }));
+
+  return <NewArrivalsClient newArrivals={formattedArrivals} />;
 }

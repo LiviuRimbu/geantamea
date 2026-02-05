@@ -39,7 +39,7 @@ const Dropdown = ({
 }: DropdownMenuProps) => {
   const isMobile = useIsMobile();
   const isImage = values.some((option) => option.imageUrl);
-  const pathname = usePathname();
+  const pathname = usePathname() || "/";
 
   return (
     <div className="relative inline-block text-center ">
