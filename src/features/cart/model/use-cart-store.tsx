@@ -6,6 +6,7 @@ import { ProductItem } from "@/shared/types/";
 
 const encodedStorage = {
   getItem: (name: string): string | null => {
+    if (typeof window === "undefined") return null;
     try {
       const encoded = localStorage.getItem(name);
       if (!encoded) return null;
@@ -16,6 +17,7 @@ const encodedStorage = {
     }
   },
   setItem: (name: string, value: string): void => {
+    if (typeof window === "undefined") return;
     try {
       const encoded = btoa(value);
       localStorage.setItem(name, encoded);
@@ -23,7 +25,10 @@ const encodedStorage = {
       console.error("Encoding failed:", err);
     }
   },
-  removeItem: (name: string): void => localStorage.removeItem(name),
+  removeItem: (name: string): void => {
+    if (typeof window === "undefined") return;
+    localStorage.removeItem(name);
+  },
 };
 
 // Store

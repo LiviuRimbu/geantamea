@@ -20,7 +20,7 @@ export const ProductPage = async ({ id, locale }: ProductPageProps) => {
     base64Img: [] as string[],
   };
 
-  item.images.forEach((img) => {
+  item.images.forEach((img: string) => {
     if (img.includes("thumb")) {
       sortedImages.thumbImg.push(img);
     }

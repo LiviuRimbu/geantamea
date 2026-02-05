@@ -1,10 +1,10 @@
-import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 
 import { ProductItem } from "@/shared/types/product-card-types";
 import { ProductCardClient } from "@/entities/product";
 
 import { TextElement } from "@/shared/ui/text-element";
+import Link from "next/link";
 
 interface ProductCardProps {
   id?: string;
