@@ -4,7 +4,7 @@ const nextConfig = {
   experimental: {
     turbo: {},
   },
-  pageExtensions: ["tsx", "ts", "jsx", "js"].map((ext) => `page.${ext}`),
+
   images: {
     remotePatterns: [
       {

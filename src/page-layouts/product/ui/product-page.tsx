@@ -1,6 +1,6 @@
 import { ProductPageClient, getProductById } from "@/entities/product";
 import { notFound } from "next/navigation";
-import { Locale, Item } from "@/shared/types";
+import { Locale } from "@/shared/types";
 
 type ProductPageProps = {
   id: string;

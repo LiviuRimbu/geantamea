@@ -1,4 +1,4 @@
-import { ProductPage } from "@/pages/product";
+import { ProductPage } from "@/page-layouts/product";
 import { Locale } from "@/shared/types";
 
 type PageProps = {

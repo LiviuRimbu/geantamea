@@ -1,4 +1,4 @@
-import { HomePage } from "@/pages/home";
+import { HomePage } from "@/page-layouts/home";
 
 export default function Page() {
   return <HomePage />;

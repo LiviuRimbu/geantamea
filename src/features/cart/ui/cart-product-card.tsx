@@ -28,7 +28,7 @@ export const CartProductCard = ({ id, cartItem }: CartProductCardProps) => {
     >
       <div className="relative w-[120px] h-[120px] md:w-[135px] md:h-[135px] flex-shrink-0 overflow-hidden bg-gray-100">
         <Image
-          src={cartItem.images[0]} // ✅ Changed from cartItem.image to cartItem.images[0]
+          src={cartItem.images[0]}
           alt="Cart product"
           fill
           sizes="120px"
@@ -54,9 +54,10 @@ export const CartProductCard = ({ id, cartItem }: CartProductCardProps) => {
         </TextElement>
         <Button
           variant="ghost"
-          className="absolute p-0 aspect-square right-[1%] top-[1%] z-[100] rounded-none text-black hover:bg-gray-200"
+          className="absolute p-0 aspect-square right-[1%] top-[1%] z-[500] rounded-none text-black hover:bg-gray-200"
           onClick={(e) => {
             e.preventDefault();
+            e.stopPropagation();
             removeItem(cartItem.id);
           }}
         >
