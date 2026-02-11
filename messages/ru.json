@@ -10,18 +10,18 @@
       "categories": {
         "bags": {
           "label": "Сумки",
+          "view-all": "Показать все",
           "handbag": "Сумочки",
           "clutch": "Клатчи",
           "backpack": "Рюкзаки"
         },
         "wallets": {
-          "label": "Кошельки"
-        },
-        "popularColors": {
-          "label": "Популярные цвета"
+          "label": "Кошельки",
+          "view-all": "Показать все"
         },
         "accessories": {
           "label": "Аксессуары",
+          "view-all": "Показать все",
           "Keychains": "Брелоки",
           "DocumentHolder": "Папка для документов",
           "CarKeychains": "Брелоки для авто",
@@ -34,18 +34,18 @@
       "categories": {
         "bags": {
           "label": "Сумки",
+          "view-all": "Показать все",
           "handbag": "Сумки",
           "clutch": "Клатчи",
           "backpack": "Рюкзаки"
         },
         "wallets": {
-          "label": "Кошельки"
-        },
-        "popularColors": {
-          "label": "Популярные цвета"
+          "label": "Кошельки",
+          "view-all": "Показать все"
         },
         "accessories": {
           "label": "Аксессуары",
+          "view-all": "Показать все",
           "Keychains": "Брелоки",
           "DocumentHolder": "Папка для документов",
           "CarKeychains": "Брелоки для авто"

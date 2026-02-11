@@ -10,15 +10,12 @@ export const AccessoriesMenuDesktop = () => {
     <div className="flex flex-col items-start">
       {accessoriesMenu.items?.map((item, index) => (
         <div key={index} className="flex flex-col items-start">
-          <Link href={accessoriesMenu.href}>
-            <TextElement
-              variant="description"
-              className="mb-4 whitespace-nowrap"
-            >
-              {t(item.key)}
-              {/*    Group name */}
-            </TextElement>
-          </Link>
+          {/*<Link href={accessoriesMenu.href}>*/}
+          <TextElement variant="description" className="mb-4 whitespace-nowrap">
+            {t(item.key)}
+            {/*    Group name */}
+          </TextElement>
+          {/*</Link>*/}
           {item.children?.map((submenu, index) => (
             <div key={index} className="flex flex-col items-start">
               <Link href={submenu.href} className="flex flex-col items-start">

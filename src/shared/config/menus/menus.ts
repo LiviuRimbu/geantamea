@@ -1,6 +1,3 @@
-// src/config/menus.ts
-// if adding something new will need to add in messages INT too
-
 export type MenuItem = {
   key: string;
   href: string;
@@ -26,6 +23,10 @@ export const menus: Record<string, MenuGroup> = {
         href: "/women/bags",
         children: [
           {
+            key: "navbar.men.categories.bags.view-all",
+            href: "/women/bags/handbag",
+          },
+          {
             key: "navbar.women.categories.bags.handbag",
             href: "/women/bags/handbag",
           },
@@ -44,13 +45,13 @@ export const menus: Record<string, MenuGroup> = {
         href: "/women/wallets",
       },
       {
-        key: "navbar.women.categories.popularColors.label",
-        href: "/women/popular-colors",
-      },
-      {
         key: "navbar.women.categories.accessories.label",
         href: "/women/accessories",
         children: [
+          {
+            key: "navbar.men.categories.bags.view-all",
+            href: "/women/bags/handbag",
+          },
           {
             key: "navbar.women.categories.accessories.Keychains",
             href: "/women/accessories/keychains",
@@ -81,6 +82,10 @@ export const menus: Record<string, MenuGroup> = {
         href: "/men/bags",
         children: [
           {
+            key: "navbar.men.categories.bags.view-all",
+            href: "/men/bags/handbag",
+          },
+          {
             key: "navbar.men.categories.bags.handbag",
             href: "/men/bags/handbag",
           },
@@ -97,15 +102,22 @@ export const menus: Record<string, MenuGroup> = {
       {
         key: "navbar.men.categories.wallets.label",
         href: "/men/wallets",
+        children: [
+          {
+            key: "navbar.men.categories.bags.view-all",
+            href: "/men/bags/handbag",
+          },
+        ],
       },
-      {
-        key: "navbar.men.categories.popularColors.label",
-        href: "/men/popular-colors",
-      },
+
       {
         key: "navbar.men.categories.accessories.label",
         href: "/men/accessories",
         children: [
+          {
+            key: "navbar.men.categories.bags.view-all",
+            href: "/men/bags/handbag",
+          },
           {
             key: "navbar.men.categories.accessories.Keychains",
             href: "/men/accessories/keychains",

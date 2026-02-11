@@ -46,7 +46,7 @@ export const NavLinksMobile = ({
   };
 
   return (
-    <div className="mr-7">
+    <div className="mr-7 ">
       <div
         className={`fixed inset-0 bg-black transition-opacity max-h-[99vh] overscroll-y-auto duration-700 ${
           isOpen ? "opacity-25" : "opacity-0 pointer-events-none"
@@ -56,13 +56,13 @@ export const NavLinksMobile = ({
 
       <div
         className={`
-          fixed top-0 left-0 h-full w-auto md:w-[30vw] z-10 flex flex-col
-          transform transition-transform duration-300 ease-in-out bg-white
+          fixed top-0 left-0 h-full w-[90vw] md:w-[30vw] z-10 flex flex-col
+          transform transition-transform duration-300 ease-in-out bg-white 
           ${isOpen ? "translate-x-0" : "-translate-x-full"}
         `}
       >
         {/* Close Button */}
-        <div className="flex items-start justify-start flex-none pl-3 pt-3">
+        <div className="flex items-start justify-start flex-none pl-3 pt-3 ">
           <Button
             variant="icon"
             onClick={() => {

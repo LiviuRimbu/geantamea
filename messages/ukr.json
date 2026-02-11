@@ -10,18 +10,18 @@
       "categories": {
         "bags": {
           "label": "Сумки",
+          "view-all": "Дивитися все",
           "handbag": "Сумочки",
           "clutch": "Клатчі",
           "backpack": "Рюкзаки"
         },
         "wallets": {
-          "label": "Гаманці"
-        },
-        "popularColors": {
-          "label": "Популярні кольори"
+          "label": "Гаманці",
+          "view-all": "Дивитися все"
         },
         "accessories": {
           "label": "Аксесуари",
+          "view-all": "Дивитися все",
           "Keychains": "Брелоки",
           "DocumentHolder": "Папка для документів",
           "CarKeychains": "Брелоки для авто",
@@ -33,19 +33,19 @@
       "label": "чоловічі",
       "categories": {
         "bags": {
+          "view-all": "Дивитися все",
           "label": "Сумки",
           "handbag": "Сумки",
           "clutch": "Клатчі",
           "backpack": "Рюкзаки"
         },
         "wallets": {
-          "label": "Гаманці"
-        },
-        "popularColors": {
-          "label": "Популярні кольори"
+          "label": "Гаманці",
+          "view-all": "Дивитися все"
         },
         "accessories": {
           "label": "Аксесуари",
+          "view-all": "Дивитися все",
           "Keychains": "Брелоки",
           "DocumentHolder": "Папка для документів",
           "CarKeychains": "Брелоки для авто"
@@ -56,6 +56,7 @@
       "label": "Аксесуари",
       "categories": {
         "label": "Аксесуари",
+        "view-all": "Дивитися все",
         "Keychains": "Брелоки",
         "DocumentHolder": "Папки для документів",
         "CarKeychains": "Брелоки для авто"

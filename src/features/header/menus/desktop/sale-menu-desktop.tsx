@@ -11,15 +11,12 @@ export const SaleMenuDesktop = () => {
       Info about sales. Need to refactor
       {saleMenu.items?.map((item, index) => (
         <div key={index} className="flex flex-col items-start">
-          <Link key={index} href={saleMenu.href}>
-            <TextElement
-              variant="description"
-              className="mb-4 whitespace-nowrap"
-            >
-              {t(item.key)}
-              {/*    Group name */}
-            </TextElement>
-          </Link>
+          {/*<Link key={index} href={saleMenu.href}>*/}
+          <TextElement variant="description" className="mb-4 whitespace-nowrap">
+            {t(item.key)}
+            {/*    Group name */}
+          </TextElement>
+          {/*</Link>*/}
           {item.children?.map((submenu, index) => (
             <div className="flex flex-col items-start">
               <Link

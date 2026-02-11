@@ -24,8 +24,6 @@ export const Cart = ({ changeColor }: CartProps) => {
   const t = useTranslations();
   useScrollLock(isOpen);
 
-  console.log(cartItems, "cartITEMSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS");
-
   return (
     <div className="ml-3">
       <Button

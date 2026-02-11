@@ -8,7 +8,7 @@ export default async function HeroSection() {
     });
 
     const heroContent = hero.map((item) => item.content).flat();
-    console.log(heroContent, "HHHHHHHHHHHHHHHHHHHerooooooo");
+    console.log(heroContent, "heroContrent");
     return <HeroSectionClient heroContent={heroContent} />;
   } catch (error) {
     console.error("Failed to fetch hero content:", error);

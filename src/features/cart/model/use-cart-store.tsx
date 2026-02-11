@@ -8,30 +8,37 @@ const encodedStorage = {
   getItem: (name: string): string | null => {
     if (typeof window === "undefined") return null;
     try {
-      const encoded = localStorage.getItem(name);
-      if (!encoded) return null;
-      return atob(encoded);
+      const stored = localStorage.getItem(name);
+      if (!stored) return null;
+
+      const binary = atob(stored);
+      const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0));
+      const decoder = new TextDecoder();
+      return decoder.decode(bytes);
     } catch (err) {
       console.error("Decoding failed:", err);
       return null;
     }
   },
+
   setItem: (name: string, value: string): void => {
     if (typeof window === "undefined") return;
     try {
-      const encoded = btoa(value);
-      localStorage.setItem(name, encoded);
+      const encoder = new TextEncoder();
+      const data = encoder.encode(value);
+      const base64 = btoa(String.fromCharCode(...data));
+      localStorage.setItem(name, base64);
     } catch (err) {
       console.error("Encoding failed:", err);
     }
   },
+
   removeItem: (name: string): void => {
     if (typeof window === "undefined") return;
     localStorage.removeItem(name);
   },
 };
 
-// Store
 interface CartState {
   items: ProductItem[];
   isOpen: boolean;
@@ -80,6 +87,7 @@ export const useCartStore = create<CartState>()(
       name: "crtstrg",
       storage: createJSONStorage(() => encodedStorage),
       partialize: (state) => ({ items: state.items }),
+      skipHydration: true, // ADD THIS - prevents hydration mismatch
     },
   ),
 );

@@ -87,7 +87,7 @@ export const FillingButton = ({
 
       <TextElement
         variant="description"
-        className={`relative z-10 transition-colors duration-[500ms] ${isHovered ? textColorHover : textColor}`}
+        className={`relative z-10 transition-colors duration-500 ${isHovered ? textColorHover : textColor}`}
       >
         {children}
       </TextElement>

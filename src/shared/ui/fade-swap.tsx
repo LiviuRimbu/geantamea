@@ -45,6 +45,7 @@ export const FadeSwap = ({
 
   return (
     <div
+      // className={`w-full h-full transition-all ease-in-out ${transitions[variant]} ${className}`}
       className={`flex transition-all ease-in-out ${transitions[variant]} ${className}`}
       style={{
         transitionDuration: `${duration}ms`,

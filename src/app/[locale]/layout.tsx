@@ -19,15 +19,15 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale}>
-      <body className="bg-[#efefef] ">
-        <NextIntlClientProvider locale={locale}>
-          {/*<Header />*/}
-          <InfoBar />
-          <Navbar />
-          <main className="px-containerX lg:containerXlg">{children}</main>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    // <html lang={locale}>
+    //   <body className="bg-[#efefef] ">
+    <NextIntlClientProvider locale={locale}>
+      {/*<Header />*/}
+      <InfoBar />
+      <Navbar />
+      <main className="px-containerX lg:containerXlg">{children}</main>
+    </NextIntlClientProvider>
+    // </body>
+    // </html>
   );
 }

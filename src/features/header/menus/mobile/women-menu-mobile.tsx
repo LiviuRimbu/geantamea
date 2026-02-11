@@ -1,17 +1,11 @@
-import Link from "next/link";
+import React from "react";
 import { useTranslations } from "next-intl";
 
 import { womenMenu } from "@/shared/config/menus/menus";
 import { TextElement } from "@/shared/ui/text-element";
 import { Button } from "@/shared/ui/shadcn/button";
 import { ChevronLeft } from "@/shared/ui/icons";
-import React from "react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/shared/ui/shadcn/accordion";
+import { MenuAccordion } from "@/features/header/ui";
 
 type WomenMenuMobileProps = {
   setSelectedCategory: React.Dispatch<React.SetStateAction<string | null>>;
@@ -36,27 +30,7 @@ export const WomenMenuMobile = ({
         </TextElement>
       </Button>
 
-      <Accordion type="multiple" className="w-full ml-2">
-        {womenMenu.items?.map((category, index) => (
-          <AccordionItem value={String(index)} key={index}>
-            <AccordionTrigger className="mr-2">
-              <TextElement variant="description">{t(category.key)}</TextElement>
-            </AccordionTrigger>
-            {category.children?.map((subCategory, index) => (
-              <AccordionContent
-                key={index}
-                className="flex flex-col gap-4 justify-start items-start border-l-gray-300 border-l pl-2"
-              >
-                <Link href={subCategory.href}>
-                  <TextElement variant="description" className="normal-case">
-                    {t(subCategory.key)}
-                  </TextElement>
-                </Link>
-              </AccordionContent>
-            ))}
-          </AccordionItem>
-        ))}
-      </Accordion>
+      <MenuAccordion menu={womenMenu} />
     </div>
   );
 };

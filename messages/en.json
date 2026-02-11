@@ -10,18 +10,18 @@
       "categories": {
         "bags": {
           "label": "Bags",
+          "view-all": "View All",
           "handbag": "Handbags",
           "clutch": "Clutches",
           "backpack": "Backpacks"
         },
         "wallets": {
-          "label": "Wallets"
-        },
-        "popularColors": {
-          "label": "Popular Colors"
+          "label": "Wallets",
+          "view-all": "View All"
         },
         "accessories": {
           "label": "Accessories",
+          "view-all": "View All",
           "Keychains": "Keychains",
           "DocumentHolder": "Document holder",
           "CarKeychains": "Car keychains",
@@ -34,18 +34,18 @@
       "categories": {
         "bags": {
           "label": "Bags",
+          "view-all": "View All",
           "handbag": "Handbags",
           "clutch": "Clutches",
           "backpack": "Backpacks"
         },
         "wallets": {
-          "label": "Wallets"
-        },
-        "popularColors": {
-          "label": "Popular Colors"
+          "label": "Wallets",
+          "view-all": "View All"
         },
         "accessories": {
           "label": "Accessories",
+          "view-all": "View All",
           "Keychains": "Keychains",
           "DocumentHolder": "Document holder",
           "CarKeychains": "Car keychains"

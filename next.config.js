@@ -1,11 +1,8 @@
 const createNextIntlPlugin = require("next-intl/plugin");
 
 const nextConfig = {
-  experimental: {
-    turbo: {},
-  },
-
   images: {
+    qualities: [60, 75],
     remotePatterns: [
       {
         protocol: "https",

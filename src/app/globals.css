@@ -105,7 +105,7 @@ body {
 
     .heading-text {
         @apply bg-gradient-to-br from-[#000000] to-[#000000] bg-clip-text p-0  text-xs  text-transparent;
-    },
+    }
 
     .underline-remove-effect {
         @apply relative inline-block;

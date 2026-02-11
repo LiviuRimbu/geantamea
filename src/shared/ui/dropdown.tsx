@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 import { TextElement } from "@/shared/ui/text-element";
 import { ChevronUp, ChevronDown } from "@/shared/ui/icons";
@@ -40,6 +40,7 @@ const Dropdown = ({
   const isMobile = useIsMobile();
   const isImage = values.some((option) => option.imageUrl);
   const pathname = usePathname() || "/";
+  const router = useRouter();
 
   return (
     <div className="relative inline-block text-center ">
@@ -115,8 +116,9 @@ const Dropdown = ({
                   /^\/[a-zA-Z-]+/,
                   `/${item.value}`,
                 );
-                document.body.style.opacity = "0.9";
-                window.location.href = newPath;
+                // document.body.style.opacity = "0.9";
+                // window.location.href = newPath;
+                router.push(newPath);
               }}
             >
               {item.imageUrl && (

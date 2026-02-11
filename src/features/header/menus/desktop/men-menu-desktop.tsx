@@ -10,15 +10,12 @@ export const MenMenuDesktop = () => {
     <div className="flex flex-col items-start">
       {menMenu.items?.map((item, index) => (
         <div key={index} className="flex flex-col items-start">
-          <Link key={index} href={menMenu.href}>
-            <TextElement
-              variant="description"
-              className="mb-4 whitespace-nowrap"
-            >
-              {t(item.key)}
-              {/*    Group name */}
-            </TextElement>
-          </Link>
+          {/*<Link key={index} href={menMenu.href}>*/}
+          <TextElement variant="description" className="mb-4 whitespace-nowrap">
+            {t(item.key)}
+            {/*    Group name */}
+          </TextElement>
+          {/*</Link>*/}
           {item.children?.map((submenu, index) => (
             <div key={index} className="flex flex-col items-start">
               <Link href={submenu.href} className="flex flex-col items-start">

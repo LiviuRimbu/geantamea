@@ -10,18 +10,18 @@
       "categories": {
         "bags": {
           "label": "Genți",
+          "view-all": "Vezi tot",
           "handbag": "Poșete",
           "clutch": "Clutch-uri",
           "backpack": "Rucsacuri"
         },
         "wallets": {
-          "label": "Portmonee"
-        },
-        "popularColors": {
-          "label": "Culori populare"
+          "label": "Portmonee",
+          "view-all": "Vezi tot"
         },
         "accessories": {
           "label": "Accesorii",
+          "view-all": "Vezi tot",
           "Keychains": "Portchei",
           "DocumentHolder": "Port-documente",
           "CarKeychains": "Portchei auto",
@@ -34,18 +34,18 @@
       "categories": {
         "bags": {
           "label": "Genți",
+          "view-all": "Vezi tot",
           "handbag": "Genți",
           "clutch": "Clutch-uri",
           "backpack": "Rucsacuri"
         },
         "wallets": {
-          "label": "Portmonee"
-        },
-        "popularColors": {
-          "label": "Culori populare"
+          "label": "Portmonee",
+          "view-all": "Vezi tot"
         },
         "accessories": {
           "label": "Accesorii",
+          "view-all": "Vezi tot",
           "Keychains": "Portchei",
           "DocumentHolder": "Port-documente",
           "CarKeychains": "Portchei auto"
