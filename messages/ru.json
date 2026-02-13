@@ -92,5 +92,10 @@
   "product-page": {
     "add-to-cart": "Добавить в корзину",
     "proceed": "Завершить заказ"
+  },
+  "other-categories": {
+    "bags": "Сумки",
+    "wallets": "Кошельки",
+    "accessories": "Аксессуары"
   }
 }

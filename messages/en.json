@@ -92,5 +92,10 @@
   "product-page": {
     "add-to-cart": "Add to cart",
     "proceed": "Finalize Order"
+  },
+  "other-categories": {
+    "bags": "bags",
+    "wallets": "wallets",
+    "accessories": "accessories"
   }
 }

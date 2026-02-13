@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 
 import { FillingButton } from "@/shared/ui/filling-button";
 import { TextElement } from "@/shared/ui/text-element";
@@ -18,6 +19,7 @@ export const HeroSectionClient = ({ heroContent }: HeroSectionClientProps) => {
   const contentSwitchTimer = 14000;
 
   const [contentIndex, setContentIndex] = useState<number>(0);
+  const router = useRouter();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -38,8 +40,22 @@ export const HeroSectionClient = ({ heroContent }: HeroSectionClientProps) => {
           Elegant &amp; Timeless
         </TextElement>
         <div>
-          <FillingButton color="white">{t("navbar.women.label")}</FillingButton>
-          <FillingButton className="ml-[24px]" color="black">
+          <FillingButton
+            color="white"
+            onClick={() => {
+              console.log("clicked");
+              router.push("/women/bags");
+            }}
+          >
+            {t("navbar.women.label")}
+          </FillingButton>
+          <FillingButton
+            className="ml-[24px]"
+            color="black"
+            onClick={() => {
+              router.push("/men/bags");
+            }}
+          >
             {t("navbar.men.label")}
           </FillingButton>
         </div>

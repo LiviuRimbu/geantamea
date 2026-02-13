@@ -93,5 +93,10 @@
   "product-page": {
     "add-to-cart": "Додати в кошик",
     "proceed": "Завершити замовлення"
+  },
+  "other-categories": {
+    "bags": "Сумки",
+    "wallets": "Гаманці",
+    "accessories": "Аксесуари"
   }
 }

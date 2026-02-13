@@ -92,5 +92,10 @@
   "product-page": {
     "add-to-cart": "Adaugă în coș",
     "proceed": "Finalizează comanda"
+  },
+  "other-categories": {
+    "bags": "Genți",
+    "wallets": "Portmonee",
+    "accessories": "Accesorii"
   }
 }
