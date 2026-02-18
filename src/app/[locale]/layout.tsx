@@ -25,7 +25,7 @@ export default async function LocaleLayout({
       {/*<Header />*/}
       <InfoBar />
       <Navbar />
-      <main className="px-containerX lg:containerXlg">{children}</main>
+      <main className="">{children}</main>
     </NextIntlClientProvider>
     // </body>
     // </html>

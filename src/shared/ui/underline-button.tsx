@@ -19,7 +19,7 @@ export const UnderlineButton = ({
     <Button
       variant="ghost"
       onClick={() => setButtonState(buttonKey)}
-      className={`relative py-2 text-[28px] font-medium
+      className={`relative py-2 text-[28px] font-medium uppercase
              duration-300
             after:content-[''] after:absolute after:bottom-0 after:inset-x-0 after:mx-auto
             after:h-[1px] after:bg-black after:w-[80%]

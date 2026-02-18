@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useRef } from "react";
 import { Button } from "@/shared/ui/shadcn/button";
 import { TextElement } from "@/shared/ui/text-element";

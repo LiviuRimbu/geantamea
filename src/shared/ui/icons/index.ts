@@ -7,3 +7,4 @@ export { ArrowLeft } from "./arrow-left";
 export { ArrowRight } from "./arrow-right";
 export { CartIcon } from "./cart-icon";
 export { PlusIcon } from "./plus-icon";
+export { FilterIcon } from "./filter-icon";

@@ -17,7 +17,7 @@ export default async function RootLayout({
   return (
     // <html lang="ro">
     <html>
-      <body className="bg-[#efefef]">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

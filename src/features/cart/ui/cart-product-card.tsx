@@ -16,7 +16,7 @@ interface CartProductCardProps {
 export const CartProductCard = ({ id, cartItem }: CartProductCardProps) => {
   const removeItem = useCartStore((state) => state.removeItem);
   const closeCart = useCartStore((state) => state.closeCart);
-
+  console.log(cartItem, "CartItem");
   return (
     <Link
       href={`/products/${cartItem.id}`}

@@ -24,7 +24,7 @@ const CategoriesGrid = dynamic(
 export const HomePage = () => {
   return (
     <div className="text-black flex flex-col">
-      <HeroSection />
+      {/*<HeroSection />*/}
       <NewArrivalsSection />
       <CategoriesGrid />
     </div>

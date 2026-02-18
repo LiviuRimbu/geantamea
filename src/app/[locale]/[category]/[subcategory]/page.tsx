@@ -1,10 +1,14 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
+
+import { TextElement } from "@/shared/ui/text-element";
 import {
   isValidCategory,
   isValidSubcategory,
 } from "@/shared/config/categories";
 
 import { OtherCategories } from "@/widgets/other-categories";
+import { Catalog } from "@/widgets/catalog";
 
 interface PageProps {
   params: Promise<{
@@ -25,11 +29,34 @@ export default async function ProductPage({ params }: PageProps) {
   }
 
   return (
-    <main className="mx-containerX olg:mx-containerXlg mt-navbar ">
-      <h1></h1>
+    // <main className="mx-containerX lg:mx-containerXlg relative ">
+    <main className="relative lg:mx-containerXlg ">
+      <div className="relative h-[400px] w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+        <Image
+          src={`/categories/${category}-category.jpg`}
+          // src="/categories/men/men-shoes.jpg"
+          alt="image"
+          quality={90}
+          sizes="100vw"
+          fill
+          // className="object-cover"
+          priority
+          className="object-cover"
+        />
+        <TextElement
+          component="h1"
+          variant="titleWhite"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        >
+          {category} {subcategory}
+        </TextElement>
+      </div>
+      {/*<h1>*/}
 
-      <OtherCategories category={category} subcategory={subcategory} />
-      <div className="product-grid">Future Catalog Here</div>
+      {/*</h1>*/}
+
+      {/*<OtherCategories category={category} subcategory={subcategory} />*/}
+      <Catalog category={category} subcategory={subcategory} />
     </main>
   );
 }
