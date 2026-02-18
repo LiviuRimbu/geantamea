@@ -1,5 +1,4 @@
 import dynamic from "next/dynamic";
-import { HeroSection } from "@/widgets/hero-section";
 
 const NewArrivalsSection = dynamic(
   () =>

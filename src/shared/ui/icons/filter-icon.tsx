@@ -1,7 +1,7 @@
 export const FilterIcon = ({
   size = 24,
   strokeWidth = 2,
-  color = "currentColor",
+  // color = "currentColor",
 }: {
   size?: number;
   strokeWidth?: number;

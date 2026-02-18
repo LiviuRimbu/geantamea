@@ -7,7 +7,6 @@ import {
   isValidSubcategory,
 } from "@/shared/config/categories";
 
-import { OtherCategories } from "@/widgets/other-categories";
 import { Catalog } from "@/widgets/catalog";
 
 interface PageProps {
