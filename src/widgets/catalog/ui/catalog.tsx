@@ -76,7 +76,7 @@ export async function Catalog({ category, subcategory }: CatalogProps) {
       <CategoriesSelector category={category} subcategory={subcategory} />
       <CatalogToolbar />
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 w-full px-2 mt-5 md:mt-6 ">
-        {formattedItemsByCategory.map((item, index) => (
+        {formattedItemsByCategory.map((item) => (
           <div key={item.id} className="w-full h-full">
             <ProductCardServer item={item as ProductItem} />
           </div>
