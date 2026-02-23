@@ -93,9 +93,19 @@
     "add-to-cart": "Add to cart",
     "proceed": "Finalize Order"
   },
-  "other-categories": {
+  "catalog": {
+    "women": "women",
+    "men": "men",
     "bags": "bags",
     "wallets": "wallets",
-    "accessories": "accessories"
+    "accessories": "accessories",
+    "filter": "filter",
+    "items-found": "unități",
+    "sort-by": "Sort by:",
+    "sort-options": {
+      "newest": "Newest",
+      "price-asc": "Price: Low to High",
+      "price-desc": "Price: High to Low"
+    }
   }
 }

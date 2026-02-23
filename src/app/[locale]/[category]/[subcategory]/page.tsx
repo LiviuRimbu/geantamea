@@ -32,7 +32,7 @@ export default async function ProductPage({ params }: PageProps) {
     <main className="relative lg:mx-containerXlg ">
       <div className="relative h-[400px] w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
         <Image
-          src={`/categories/${category}-category.jpg`}
+          src={`/categories/${category}-category.webp`}
           // src="/categories/men/men-shoes.jpg"
           alt="image"
           quality={90}

@@ -93,9 +93,20 @@
     "add-to-cart": "Adaugă în coș",
     "proceed": "Finalizează comanda"
   },
-  "other-categories": {
+
+  "catalog": {
+    "women": "dame",
+    "men": "Bărbați",
     "bags": "Genți",
     "wallets": "Portmonee",
-    "accessories": "Accesorii"
+    "accessories": "Accesorii",
+    "filter": "filtru",
+    "items-found": "produse",
+    "sort-by": "Sortare",
+    "sort-options": {
+      "newest": "Noi",
+      "price-asc": "Preț Crescător",
+      "price-desc": "Preț Descrescător"
+    }
   }
 }

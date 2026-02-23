@@ -93,9 +93,19 @@
     "add-to-cart": "Добавить в корзину",
     "proceed": "Завершить заказ"
   },
-  "other-categories": {
+  "catalog": {
+    "women": "женские",
+    "men": "мужские",
     "bags": "Сумки",
     "wallets": "Кошельки",
-    "accessories": "Аксессуары"
+    "accessories": "Аксессуары",
+    "filter": "фильтр",
+    "items-found": "Найдено",
+    "sort-by": "Сортировка",
+    "sort-options": {
+      "newest": "Новинки",
+      "price-asc": "Сначала дешевле",
+      "price-desc": "Сначала дороже"
+    }
   }
 }

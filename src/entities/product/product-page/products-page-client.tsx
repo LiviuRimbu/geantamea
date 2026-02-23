@@ -1,4 +1,3 @@
-// product-page-client.tsx
 "use client";
 
 import dynamic from "next/dynamic";
@@ -41,10 +40,7 @@ export const ProductPageClient = ({
   locale,
 }: ProductPageClientProps) => {
   const isMobile = useIsMobile();
-  // useEffect(() => {
-  //   console.log(item, "item from client");
-  //   return () => {};
-  // }, []);
+
   return (
     <div className="flex gap-6 justify-center items-center  flex-col  w-full mt-containerYtop">
       <div className="flex items-start justify-center flex-col lg:flex-row">
@@ -55,36 +51,6 @@ export const ProductPageClient = ({
         {/*<ScrollSyncExample />*/}
         <ProductPageInfo item={item} locale={locale} />
       </div>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
-      <p>Limit</p>
     </div>
   );
 };

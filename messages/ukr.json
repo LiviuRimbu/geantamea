@@ -94,9 +94,19 @@
     "add-to-cart": "Додати в кошик",
     "proceed": "Завершити замовлення"
   },
-  "other-categories": {
+  "catalog": {
+    "women": "жіночі",
+    "men": "чоловічі",
     "bags": "Сумки",
     "wallets": "Гаманці",
-    "accessories": "Аксесуари"
+    "accessories": "Аксесуари",
+    "filter": "фільтр",
+    "items-found": "Знайдено",
+    "sort-by": "Сортування",
+    "sort-options": {
+      "newest": "Новинки",
+      "price-asc": "Від дешевих",
+      "price-desc": "Від дорогих"
+    }
   }
 }

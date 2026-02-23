@@ -1,7 +1,14 @@
 export const categories = {
   men: {
-    bags: ["backpack", "shoulder bag", "tote", "crossbody", "Portofel"],
-    wallets: ["bifold", "card holder", "zip wallet"],
+    bags: [
+      "handbag",
+      "backpack",
+      "Crossbody bag",
+      "Tote bag",
+      "Evening clutch",
+      "Geantă crossbody",
+    ],
+    wallets: ["wallet", "card holder", "zip wallet"],
     accessories: ["belt", "gloves", "hat"],
   },
   women: {
