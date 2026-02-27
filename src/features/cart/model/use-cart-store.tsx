@@ -87,7 +87,7 @@ export const useCartStore = create<CartState>()(
       name: "crtstrg",
       storage: createJSONStorage(() => encodedStorage),
       partialize: (state) => ({ items: state.items }),
-      skipHydration: true, // ADD THIS - prevents hydration mismatch
+      // skipHydration: true, // ADD THIS - prevents hydration mismatch
     },
   ),
 );

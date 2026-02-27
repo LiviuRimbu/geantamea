@@ -49,7 +49,7 @@ export const ProductPageInfo = ({ item, locale }: ProductPageInfoProps) => {
         {!isInCart ? (
           <FillingButton
             color="black"
-            onClick={() => {
+            onClickAction={() => {
               addItem(item);
             }}
             className="w-[90%]"
@@ -59,7 +59,7 @@ export const ProductPageInfo = ({ item, locale }: ProductPageInfoProps) => {
         ) : (
           <FillingButton
             color="black"
-            onClick={() => {
+            onClickAction={() => {
               addItem(item);
             }}
             className="w-[90%]"

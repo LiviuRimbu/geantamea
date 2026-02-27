@@ -10,6 +10,8 @@ import { CartIcon } from "@/shared/ui/icons/cart-icon";
 import { X } from "@/shared/ui/icons";
 
 import { useCartStore } from "@/features/cart";
+import { FillingButton } from "src/shared/ui";
+import Link from "next/link";
 
 type CartProps = {
   changeColor: boolean;
@@ -38,14 +40,12 @@ export const Cart = ({ changeColor }: CartProps) => {
           className={`text-white group-hover:text-black  ${changeColor && "!text-black"} !w-[20px] !h-[20px]`}
         />
       </Button>
-
       <div
         className={`fixed inset-0 bg-black z-40 transition-opacity duration-300 ${
           isOpen ? "opacity-25" : "opacity-0 pointer-events-none"
         }`}
         onClick={() => closeCart()}
       />
-
       <div
         className={`
                     fixed top-0 right-0 h-full w-[90vw] md:w-[25vw] bg-white z-50 flex flex-col px-[20px]
@@ -80,11 +80,22 @@ export const Cart = ({ changeColor }: CartProps) => {
         </div>
         {/*Total*/}
         {cartItems.length > 0 && (
-          <div className="border-t-[1px] border-t-gray-300 flex justify-between w-full h-[100px] p-7">
-            <TextElement variant="subtitle" className="mb-3">
-              {t("cart.total")}:
-            </TextElement>
-            <TextElement variant="subtitle">{cartTotal()}MDL</TextElement>
+          <div className="border-t-[1px] border-t-gray-300 flex flex-col justify-between w-full h-[100px] p-7 mb-7 ">
+            <div className="flex justify-between">
+              <TextElement variant="subtitle" className="mb-3">
+                {t("cart.total")}:
+              </TextElement>
+              <TextElement variant="subtitle">{cartTotal()}MDL</TextElement>
+            </div>
+            <Link
+              href="/checkout"
+              className="flex justify-center w-full"
+              onClick={() => closeCart()}
+            >
+              <FillingButton color="black" className="w-full">
+                {t(`cart.checkout`)}
+              </FillingButton>
+            </Link>
           </div>
         )}
       </div>

@@ -26,7 +26,6 @@ export async function Catalog({ category, subcategory }: CatalogProps) {
     category as Categories,
     subcategory as Subcategory<Categories>,
   );
-  console.log(acceptedTypes, "acceptedTypes", category, subcategory);
 
   const itemsByCategory = await prisma.item.findMany({
     where: {
@@ -70,12 +69,6 @@ export async function Catalog({ category, subcategory }: CatalogProps) {
     price: item.price.toNumber(),
   }));
 
-  console.log(
-    // catalogItems,
-    // "itemsCategoryXXXXXXXXXXXXXXXX",
-    // category,
-    subcategory,
-  );
   return (
     <CatalogClient
       catalogItems={catalogItems}

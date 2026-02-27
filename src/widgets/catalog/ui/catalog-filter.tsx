@@ -20,6 +20,7 @@ export const CatalogFilter = ({
   onResetAction,
 }: CatalogFilterProps) => {
   const t = useTranslations("catalog");
+
   return (
     <SidebarWrapper
       direction="left"

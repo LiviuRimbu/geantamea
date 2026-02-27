@@ -77,7 +77,8 @@
   "cart": {
     "label": "Корзина",
     "empty": "Ваша корзина пуста",
-    "total": "Итого"
+    "total": "Итого",
+    "checkout": "Оформить"
   },
   "new-arrival-section": {
     "label": "Новинки",
@@ -107,5 +108,9 @@
       "price-asc": "Сначала дешевле",
       "price-desc": "Сначала дороже"
     }
+  },
+  "checkout": {
+    "your-order" : "Ваш заказ",
+    "total" : "Total"
   }
 }

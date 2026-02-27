@@ -41,13 +41,13 @@ model Brand {
 }
 
 model CartItem {
-  id         String   @id
+  id         String  @id
   customerId String
   itemId     String
   quantity   Int
   subtotal   Decimal
-  Customer   Customer @relation(fields: [customerId], references: [id])
-  Item       Item     @relation(fields: [itemId], references: [id])
+  // Customer   Customer @relation(fields: [customerId], references: [id])
+  Item       Item    @relation(fields: [itemId], references: [id])
 }
 
 model Color {
@@ -61,13 +61,13 @@ model Color {
 }
 
 model Customer {
-  id        String     @id
+  id        Int      @id @default(autoincrement())
   name      String
-  phone     String     @unique
+  phone     String
   comment   String?
-  active    Boolean    @default(true)
-  createdAt DateTime   @default(now())
-  CartItem  CartItem[]
+  cartItems String[]
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
 }
 
 model Item {

@@ -11,12 +11,17 @@ import { Link } from "@/i18n/navigation";
 interface CartProductCardProps {
   id?: string;
   cartItem: ProductItem;
+  deleteBtn?: boolean;
 }
 
-export const CartProductCard = ({ id, cartItem }: CartProductCardProps) => {
+export const CartProductCard = ({
+  id,
+  cartItem,
+  deleteBtn = true,
+}: CartProductCardProps) => {
   const removeItem = useCartStore((state) => state.removeItem);
   const closeCart = useCartStore((state) => state.closeCart);
-  console.log(cartItem, "CartItem");
+
   return (
     <Link
       href={`/products/${cartItem.id}`}
@@ -52,17 +57,19 @@ export const CartProductCard = ({ id, cartItem }: CartProductCardProps) => {
         <TextElement variant="description">
           {cartItem.price} LEI {/* ✅ Use actual price */}
         </TextElement>
-        <Button
-          variant="ghost"
-          className="absolute p-0 aspect-square right-[1%] top-[1%] z-[500] rounded-none text-black hover:bg-gray-200"
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            removeItem(cartItem.id);
-          }}
-        >
-          <TrashIcon />
-        </Button>
+        {deleteBtn && (
+          <Button
+            variant="ghost"
+            className="absolute p-0 aspect-square right-[1%] top-[1%] z-[500] rounded-none text-black hover:bg-gray-200"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              removeItem(cartItem.id);
+            }}
+          >
+            <TrashIcon />
+          </Button>
+        )}
       </div>
     </Link>
   );

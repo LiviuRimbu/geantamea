@@ -13,6 +13,7 @@ interface ProductCardProps {
 
 export const ProductCardServer = ({ id, item }: ProductCardProps) => {
   const thumbImages = item.images.filter((img) => img.includes("thumb"));
+  console.log(item, "Item from card server");
   return (
     <Link
       href={`/products/${item.id}`}

@@ -15,13 +15,17 @@ export const CategoriesSelector = ({
   subcategory,
 }: SubcategoriesSelectorProps) => {
   const categoryKey = category as Categories;
-  // console.log(category, subcategory);
+
   const t = useTranslations();
   return (
     // <div className="flex items-center justify-center mt-9">
     <div className="flex w-screen overflow-x-auto scrollbar-hide mt-10  lg:mt-32  min-h-[56px] justify-center  ">
       {Object.keys(categories[categoryKey]).map((item, index) => (
-        <Link key={index} href={`/${category}/${item}`} className="shrink-0">
+        <Link
+          key={index}
+          href={`/shop/${category}/${item}`}
+          className="shrink-0"
+        >
           <UnderlineButton
             buttonKey={item}
             buttonState={subcategory}

@@ -42,9 +42,8 @@ export const HeroSectionClient = ({ heroContent }: HeroSectionClientProps) => {
         <div>
           <FillingButton
             color="white"
-            onClick={() => {
-              console.log("clicked");
-              router.push("/women/bags");
+            onClickAction={() => {
+              router.push("/shop/women/bags");
             }}
           >
             {t("navbar.women.label")}
@@ -52,8 +51,8 @@ export const HeroSectionClient = ({ heroContent }: HeroSectionClientProps) => {
           <FillingButton
             className="ml-[24px]"
             color="black"
-            onClick={() => {
-              router.push("/men/bags");
+            onClickAction={() => {
+              router.push("/shop/men/bags");
             }}
           >
             {t("navbar.men.label")}

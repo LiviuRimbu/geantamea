@@ -78,7 +78,8 @@
   "cart": {
     "label": "Кошик",
     "empty": "Ваш кошик порожній",
-    "total": "Разом"
+    "total": "Разом",
+    "checkout": "Оформити"
   },
   "new-arrival-section": {
     "label": "Новинки",
@@ -108,5 +109,9 @@
       "price-asc": "Від дешевих",
       "price-desc": "Від дорогих"
     }
+  },
+  "checkout": {
+    "your-order" : "Ваше замовлення",
+    "total" : "Total"
   }
 }

@@ -77,7 +77,8 @@
   "cart": {
     "label": "Comanda mea",
     "empty": "Coșul tău este gol",
-    "total": "Total"
+    "total": "Total",
+    "checkout": "Finalizează"
   },
   "new-arrival-section": {
     "label": "Produse noi",
@@ -108,5 +109,9 @@
       "price-asc": "Preț Crescător",
       "price-desc": "Preț Descrescător"
     }
+  },
+  "checkout": {
+    "your-order" : "Comanda d-ră",
+    "total" : "Total"
   }
 }

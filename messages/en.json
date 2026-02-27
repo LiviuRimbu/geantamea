@@ -77,7 +77,8 @@
   "cart": {
     "label": "Cart",
     "empty": "Your cart is empty",
-    "total": "Total"
+    "total": "Total",
+    "checkout": "Checkout"
   },
   "new-arrival-section": {
     "label": "New arrival",
@@ -107,5 +108,9 @@
       "price-asc": "Price: Low to High",
       "price-desc": "Price: High to Low"
     }
+  },
+  "checkout": {
+    "your-order" : "Your order",
+    "total" : "Total"
   }
 }

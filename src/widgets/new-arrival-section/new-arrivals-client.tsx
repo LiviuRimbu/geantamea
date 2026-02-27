@@ -19,7 +19,6 @@ interface NewArrivalsClientProps {
 export const NewArrivalsClient = ({ newArrivals }: NewArrivalsClientProps) => {
   const t = useTranslations();
   const [buttonPressed, setButtonPressed] = useState<string>("women");
-  // console.log(newArrivals, "NewArrrrri");
 
   const [_visible, setVisible] = useState(true);
   useEffect(() => {
@@ -58,21 +57,24 @@ export const NewArrivalsClient = ({ newArrivals }: NewArrivalsClientProps) => {
       {/*Products*/}
       <ScrollableRow className="overflow-x-auto  h-auto">
         <FadeSwap triggerKey={buttonPressed} duration={400}>
-          {newArrivals
-            .filter(
-              (item) =>
-                item.gender?.toLowerCase() ===
-                genderMap[buttonPressed as keyof typeof genderMap],
-            )
-            .slice(0, 10)
-            .map((item) => (
-              <div
-                key={item.id}
-                className="relative w-[200px] h-[200px] md:w-[300px] md:h-[400px] cursor-pointer mr-[30px]"
-              >
-                <ProductCardServer item={item} />
-              </div>
-            ))}
+          <div className="flex flex-row">
+            {newArrivals
+              .filter(
+                (item) =>
+                  item.gender?.toLowerCase() ===
+                  genderMap[buttonPressed as keyof typeof genderMap],
+              )
+              .slice(0, 10)
+              .map((item) => (
+                <div
+                  key={item.id}
+                  // className="relative w-[200px] h-[200px] md:w-[300px] md:h-[400px] cursor-pointer mr-[30px]"
+                  className="relative cursor-pointer min-w-[150px] flex-auto max-w-[500px]  mr-[30px]"
+                >
+                  <ProductCardServer item={item} />
+                </div>
+              ))}
+          </div>
         </FadeSwap>
       </ScrollableRow>
       <FadeSwap triggerKey={buttonPressed} duration={400}>

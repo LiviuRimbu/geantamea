@@ -42,7 +42,7 @@ export const OtherCategories = <C extends Categories>({
       <div className="flex flex-col lg:flex-row items-start justify-center w-full gap-4">
         {otherSubcategories.map((item) => (
           <Link
-            href={`/${category}/${item}`}
+            href={`/shop/${category}/${item}`}
             key={item}
             className="relative w-full lg:w-[250px] group overflow-hidden"
           >

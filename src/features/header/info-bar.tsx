@@ -7,7 +7,6 @@ import { useTextRotator } from "@/shared/hooks/use-text-rotator";
 export const InfoBar = () => {
   const t = useTranslations();
   const messages = [t("infobar.sales"), t("infobar.delivery")];
-  // const isMobile = useIsMobile();
   const { message: currentMessage, fade } = useTextRotator(messages, 4000);
   return (
     <div className="w-full flex bg-[#1c1c1c] justify-center px-8 md:px-11 ">

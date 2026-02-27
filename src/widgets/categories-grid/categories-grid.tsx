@@ -11,7 +11,7 @@ export const CategoriesGrid = async () => {
     <div className="mb-[300px]  mt-[48px] md:mt-[80px] flex items-center justify-center ">
       <div className="flex flex-col gap-[20px] md:flex-row md:gap-[30px]">
         <Link
-          href="/women/bags"
+          href="/shop/women/bags"
           className="w-[350px] md:w-[830px] h-[384px] md:h-[610px] overflow-hidden flex items-center justify-center group relative"
         >
           <TextElement
@@ -30,7 +30,7 @@ export const CategoriesGrid = async () => {
         </Link>
         <div className="flex flex-col gap-[20px] md:gap-[30px]">
           <Link
-            href="/men/bags"
+            href="/shop/men/bags"
             className="relative w-[350px] md:w-[400px] h-[180px] md:h-[290px] overflow-hidden flex items-center justify-center"
           >
             <TextElement
@@ -49,7 +49,7 @@ export const CategoriesGrid = async () => {
           </Link>
 
           <Link
-            href="/accessories"
+            href="/shop/accessories"
             className="relative w-[350px] md:w-[400px] h-[180px] md:h-[290px] cursor-pointer overflow-hidden flex items-center justify-center"
           >
             <TextElement

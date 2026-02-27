@@ -42,6 +42,5 @@ export default async function NewArrivalsSection() {
     ...item,
     price: item.price.toNumber(),
   }));
-
   return <NewArrivalsClient newArrivals={formattedArrivals} />;
 }
