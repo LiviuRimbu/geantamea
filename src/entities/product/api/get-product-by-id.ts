@@ -34,11 +34,11 @@ export async function getProductById(id: string, locale: Locale) {
       description_ro: true,
       description_en: true,
       description_ru: true,
-      description_ukr: true,
+      description_uk: true,
       productDetails_ro: true,
       productDetails_en: true,
       productDetails_ru: true,
-      productDetails_ukr: true,
+      productDetails_uk: true,
 
       Brand: {
         select: {
@@ -52,7 +52,7 @@ export async function getProductById(id: string, locale: Locale) {
           name_ro: true,
           name_en: true,
           name_ru: true,
-          name_ukr: true,
+          name_uk: true,
           imageURL: true,
         },
       },
@@ -62,7 +62,7 @@ export async function getProductById(id: string, locale: Locale) {
           name_ro: true,
           name_en: true,
           name_ru: true,
-          name_ukr: true,
+          name_uk: true,
         },
       },
       ItemType: {
@@ -71,7 +71,7 @@ export async function getProductById(id: string, locale: Locale) {
           name_ro: true,
           name_en: true,
           name_ru: true,
-          name_ukr: true,
+          name_uk: true,
         },
       },
       tags: {
@@ -80,7 +80,7 @@ export async function getProductById(id: string, locale: Locale) {
           name_ro: true,
           name_en: true,
           name_ru: true,
-          name_ukr: true,
+          name_uk: true,
           imageURL: true,
         },
       },
@@ -98,7 +98,7 @@ export async function getProductById(id: string, locale: Locale) {
               name_ro: true,
               name_en: true,
               name_ru: true,
-              name_ukr: true,
+              name_uk: true,
               imageURL: true,
             },
           },

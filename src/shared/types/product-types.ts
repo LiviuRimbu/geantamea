@@ -25,12 +25,12 @@ export interface Item {
   description_ro: string;
   description_en: string;
   description_ru: string;
-  description_ukr: string;
+  description_uk: string;
 
   productDetails_ro: string[];
   productDetails_en: string[];
   productDetails_ru: string[];
-  productDetails_ukr: string[];
+  productDetails_uk: string[];
 
   brandId: number;
   colorId: number;
@@ -57,7 +57,7 @@ export type Color = {
   name_en: string;
   name_ro: string;
   name_ru: string;
-  name_ukr: string;
+  name_uk: string;
   imageURL: string;
 };
 
@@ -66,7 +66,7 @@ export type Material = {
   name_en: string;
   name_ro: string;
   name_ru: string;
-  name_ukr: string;
+  name_uk: string;
 };
 
 export type ItemType = {
@@ -74,7 +74,7 @@ export type ItemType = {
   name_en: string;
   name_ro: string;
   name_ru: string;
-  name_ukr: string;
+  name_uk: string;
 };
 
 export type Tag = {
@@ -82,7 +82,7 @@ export type Tag = {
   name_en: string;
   name_ro: string;
   name_ru: string;
-  name_ukr: string;
+  name_uk: string;
   imageURL: string;
 };
 
@@ -91,7 +91,7 @@ export type AccessoryType = {
   name_en: string;
   name_ro: string;
   name_ru: string;
-  name_ukr: string;
+  name_uk: string;
   imageURL: string | null;
 };
 

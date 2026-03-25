@@ -11,7 +11,7 @@ const itemSelect = {
       name_ro: true,
       name_en: true,
       name_ru: true,
-      name_ukr: true,
+      name_uk: true,
     },
   },
   gender: true,

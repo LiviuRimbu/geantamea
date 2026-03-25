@@ -15,7 +15,7 @@ CREATE TABLE "AccessoryType" (
     "name_en" TEXT NOT NULL,
     "name_ro" TEXT NOT NULL,
     "name_ru" TEXT NOT NULL,
-    "name_ukr" TEXT NOT NULL,
+    "name_uk" TEXT NOT NULL,
     "imageURL" TEXT,
     "id" SERIAL NOT NULL,
 
@@ -46,7 +46,7 @@ CREATE TABLE "Color" (
     "name_en" TEXT NOT NULL,
     "name_ro" TEXT NOT NULL,
     "name_ru" TEXT NOT NULL,
-    "name_ukr" TEXT NOT NULL,
+    "name_uk" TEXT NOT NULL,
     "imageURL" TEXT NOT NULL,
     "id" SERIAL NOT NULL,
 
@@ -110,7 +110,7 @@ CREATE TABLE "ItemType" (
     "name_en" TEXT NOT NULL,
     "name_ro" TEXT NOT NULL,
     "name_ru" TEXT NOT NULL,
-    "name_ukr" TEXT NOT NULL,
+    "name_uk" TEXT NOT NULL,
     "id" SERIAL NOT NULL,
 
     CONSTRAINT "ItemType_pkey" PRIMARY KEY ("id")
@@ -121,7 +121,7 @@ CREATE TABLE "Material" (
     "name_en" TEXT NOT NULL,
     "name_ro" TEXT NOT NULL,
     "name_ru" TEXT NOT NULL,
-    "name_ukr" TEXT NOT NULL,
+    "name_uk" TEXT NOT NULL,
     "id" SERIAL NOT NULL,
 
     CONSTRAINT "Material_pkey" PRIMARY KEY ("id")
@@ -132,7 +132,7 @@ CREATE TABLE "Tag" (
     "name_en" TEXT NOT NULL,
     "name_ro" TEXT NOT NULL,
     "name_ru" TEXT NOT NULL,
-    "name_ukr" TEXT NOT NULL,
+    "name_uk" TEXT NOT NULL,
     "imageURL" TEXT NOT NULL,
     "id" SERIAL NOT NULL,
 

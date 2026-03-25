@@ -25,8 +25,8 @@ ALTER COLUMN "about" SET DEFAULT '',
 ALTER COLUMN "description_en" SET DEFAULT '',
 ALTER COLUMN "description_ro" SET DEFAULT '',
 ALTER COLUMN "description_ru" SET DEFAULT '',
-ALTER COLUMN "description_ukr" SET DEFAULT '',
+ALTER COLUMN "description_uk" SET DEFAULT '',
 ALTER COLUMN "productDetails_en" SET DEFAULT ARRAY[]::TEXT[],
 ALTER COLUMN "productDetails_ro" SET DEFAULT ARRAY[]::TEXT[],
 ALTER COLUMN "productDetails_ru" SET DEFAULT ARRAY[]::TEXT[],
-ALTER COLUMN "productDetails_ukr" SET DEFAULT ARRAY[]::TEXT[];
+ALTER COLUMN "productDetails_uk" SET DEFAULT ARRAY[]::TEXT[];

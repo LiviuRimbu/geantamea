@@ -2,7 +2,6 @@
 
 import {useRouter} from "next/navigation";
 import {useEffect, useState} from "react";
-import {Button} from "@/shared/ui/shadcn";
 import {FillingButton, TextElement} from "@/shared/ui";
 
 export default function SuccessPage() {
@@ -17,12 +16,9 @@ export default function SuccessPage() {
             return
         }
         setCustomer(JSON.parse(data))
-
-
     }, [])
-
     if (!customer) return null
-    // console.log(customer!.name)
+
     return (
         <div className="flex flex-col items-center justify-center">
             <div>

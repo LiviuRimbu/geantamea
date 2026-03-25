@@ -1,4 +1,29 @@
 {
+  "Metadata": {
+    "title": "GeantaMea | Genti si portmonee din piele în Chișinău, Moldova",
+    "description": "GeantaMea: genti si portmonee din piele. Livrare gratis în Chișinău și în toată Republica Moldova. Comandă online!",
+
+    "openGraph": {
+      "title": "GeantaMea - Genti si portmonee din piele în Moldova",
+      "description": "Livrare gratuita in Chisinau"
+    }
+  },
+  "Metadata-cat": {
+    "title": "| Piele naturală",
+    "description": "Descoperă colecția de accesorii din piele naturală GeantaMea. Modele elegante și rezistente, perfecte pentru birou sau uz zilnic. Livrare rapidă în Chișinău și toată Moldova",
+      "women": "dame",
+      "men": "Bărbați",
+      "bags": "Genți",
+      "wallets": "Portmonee",
+      "accessories": "Accesorii",
+      "keyholder": "portchei",
+      "umbrella": "umbrelă",
+    "openGraph": {
+      "title": "GeantaMea - Genți și portmonee din piele în Moldova",
+      "description": "GeantaMea | Genți, portofele și accesorii din piele în Moldova",
+      "material": "Piele"
+    }
+  },
   "infobar": {
     "sales": "SUPER REDUCERI PÂNĂ LA 40%",
     "shop-link": "Vezi produsele",
@@ -74,6 +99,9 @@
       }
     }
   },
+  "hero-section": {
+    "info":"Genți și Portmonee din Piele Naturală în Moldova"
+  },
   "cart": {
     "label": "Comanda mea",
     "empty": "Coșul tău este gol",
@@ -94,13 +122,14 @@
     "add-to-cart": "Adaugă în coș",
     "proceed": "Finalizează comanda"
   },
-
   "catalog": {
     "women": "dame",
     "men": "Bărbați",
     "bags": "Genți",
     "wallets": "Portmonee",
     "accessories": "Accesorii",
+    "keyholder": "portchei",
+    "umbrella": "umbrelă",
     "filter": "filtru",
     "items-found": "produse",
     "sort-by": "Sortare",
@@ -111,7 +140,7 @@
     }
   },
   "checkout": {
-    "your-order" : "Comanda d-ră",
-    "total" : "Total"
+    "your-order": "Comanda d-ră",
+    "total": "Total"
   }
 }

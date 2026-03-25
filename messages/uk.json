@@ -1,0 +1,146 @@
+{
+  "Metadata": {
+    "title": "GeantaMea | Шкіряні сумки та гаманці у Кишиневі, Молдова",
+    "description": "GeantaMea: сумки та гаманці з натуральної шкіри. Безкоштовна доставка по Кишиневу та всій Молдові. Замовляйте онлайн!",
+    "openGraph": {
+      "title": "GeantaMea - Шкіряні сумки та гаманці в Молдові",
+      "description": "Безкоштовна доставка по Кишиневу"
+    }
+  },
+  "Metadata-cat": {
+    "title": "| Натуральна шкіра",
+    "description": "Відкрийте для себе колекцію аксесуарів із натуральної шкіри від GeantaMea. Елегантні та міцні моделі для офісу та щоденного використання. Швидка доставка по Кишиневу та всій Молдові.",
+    "women": "жіночі",
+    "men": "чоловічі",
+    "bags": "Сумки",
+    "wallets": "Гаманці",
+    "accessories": "Аксесуари",
+    "keyholder": "Ключниця",
+    "umbrella": "Парасолька",
+    "openGraph": {
+      "title": "GeantaMea - Шкіряні сумки та гаманці в Молдові",
+      "description": "GeantaMea | Сумки, гаманці та аксесуари зі шкіри в Молдові",
+      "material": "Шкіра"
+    }
+  },
+  "infobar": {
+    "sales": "СУПЕР ЗНИЖКИ ДО 40%",
+    "shop-link": "Дивитися товари",
+    "delivery": "БЕЗКОШТОВНА ДОСТАВКА ПО КИШИНЕВУ"
+  },
+  "navbar": {
+    "women": {
+      "label": "жіночі",
+      "categories": {
+        "bags": {
+          "label": "Сумки",
+          "view-all": "Дивитися все",
+          "handbag": "Сумочки",
+          "clutch": "Клатчі",
+          "backpack": "Рюкзаки"
+        },
+        "wallets": {
+          "label": "Гаманці",
+          "view-all": "Дивитися все"
+        },
+        "accessories": {
+          "label": "Аксесуари",
+          "view-all": "Дивитися все",
+          "Keychains": "Брелоки",
+          "DocumentHolder": "Папка для документів",
+          "CarKeychains": "Брелоки для авто",
+          "CosmeticBag": "Косметичка"
+        }
+      }
+    },
+    "men": {
+      "label": "чоловічі",
+      "categories": {
+        "bags": {
+          "view-all": "Дивитися все",
+          "label": "Сумки",
+          "handbag": "Сумки",
+          "clutch": "Клатчі",
+          "backpack": "Рюкзаки"
+        },
+        "wallets": {
+          "label": "Гаманці",
+          "view-all": "Дивитися все"
+        },
+        "accessories": {
+          "label": "Аксесуари",
+          "view-all": "Дивитися все",
+          "Keychains": "Брелоки",
+          "DocumentHolder": "Папка для документів",
+          "CarKeychains": "Брелоки для авто"
+        }
+      }
+    },
+    "accessories": {
+      "label": "Аксесуари",
+      "categories": {
+        "label": "Аксесуари",
+        "view-all": "Дивитися все",
+        "Keychains": "Брелоки",
+        "DocumentHolder": "Папки для документів",
+        "CarKeychains": "Брелоки для авто"
+      }
+    },
+    "sale": {
+      "label": "знижки",
+      "categories": {
+        "info": "infouk"
+      }
+    },
+    "gift": {
+      "label": "подарунки",
+      "categories": {
+        "info": "Info About Giftuk"
+      }
+    }
+  },
+  "hero-section": {
+    "info":"Шкіряні сумки та гаманці в Молдові"
+  },
+  "cart": {
+    "label": "Кошик",
+    "empty": "Ваш кошик порожній",
+    "total": "Разом",
+    "checkout": "Оформити"
+  },
+  "new-arrival-section": {
+    "label": "Новинки",
+    "btn-part1": "",
+    "btn-part2": "сумки та аксесуари"
+  },
+  "categories-grid": {
+    "women": "жіночі",
+    "men": "чоловічі",
+    "accessories": "Аксесуари"
+  },
+  "product-page": {
+    "add-to-cart": "Додати в кошик",
+    "proceed": "Завершити замовлення"
+  },
+  "catalog": {
+    "women": "жіночі",
+    "men": "чоловічі",
+    "bags": "Сумки",
+    "wallets": "Гаманці",
+    "accessories": "Аксесуари",
+    "keyholder": "Ключниця",
+    "umbrella": "Парасолька",
+    "filter": "фільтр",
+    "items-found": "Знайдено",
+    "sort-by": "Сортування",
+    "sort-options": {
+      "newest": "Новинки",
+      "price-asc": "Від дешевих",
+      "price-desc": "Від дорогих"
+    }
+  },
+  "checkout": {
+    "your-order" : "Ваше замовлення",
+    "total" : "Total"
+  }
+}

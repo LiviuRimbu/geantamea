@@ -19,7 +19,7 @@ export const LangSwitcher = ({
     { label: "EN", value: "EN" },
     { label: "RO", value: "RO" },
     { label: "RU", value: "RU" },
-    { label: "UKR", value: "UKR" },
+    { label: "uk", value: "uk" },
   ];
 
   const pathname = usePathname() || "/";

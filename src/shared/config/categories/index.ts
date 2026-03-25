@@ -5,7 +5,7 @@ export type { Categories, Subcategory, ItemType } from "./categories";
 export type {
   MenSubcategory,
   WomenSubcategory,
-  AccessoriesSubcategory,
+  // AccessoriesSubcategory,
 } from "./categories";
 
 export {

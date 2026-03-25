@@ -17,6 +17,7 @@ const textElementVariants = cva(
           "text-[14px] xs:text-[16px] sm:text-[18px] text-white uppercase font-thin",
         descriptionWhite: "text-white text-[12px] sm:text-[12px] uppercase",
         description: "  text-black text-[0.625rem] sm:text-[0.75rem] uppercase",
+        ghost: "",
       },
       fontFamily: {
         default: "font-instrumentsans",

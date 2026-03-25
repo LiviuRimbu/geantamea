@@ -20,13 +20,15 @@ export const ProductPageInfo = ({ item, locale }: ProductPageInfoProps) => {
 
   return (
     <div className="lg:sticky lg:top-navbar lg:self-start w-full lg:max-w-md p-4 flex flex-col">
-      <TextElement variant="title" className="text-left mb-2">
+        <TextElement component="h1" variant="ghost" className="flex flex-col">
+      <TextElement component="span" variant="title" className="text-left mb-2">
         {item.Brand.name_ro}
       </TextElement>
       {/*type*/}
-      <TextElement variant="subtitle" className="text-left normal-case mb-7">
-        {item.ItemType[`name_${locale}`]}
+      <TextElement component="span" variant="subtitle" className="text-left normal-case mb-7">
+        {item.ItemType[`name_${locale}`]} {item.Material['name_ro']}
       </TextElement>
+        </TextElement>
       {/*price*/}
       <TextElement variant="subtitle" className="text-left  mb-7">
         {item.price} LEI

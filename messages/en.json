@@ -1,4 +1,32 @@
 {
+  "Metadata": {
+    "title": "GeantaMea | Leather Bags and Wallets in Chisinau, Moldova",
+    "description": "GeantaMea: leather bags and wallets. Fast delivery in Chisinau and across the Republic of Moldova. Order online!",
+
+    "openGraph": {
+      "title": "GeantaMea - Leather Bags and Wallets in Moldova",
+      "description": "Fast delivery in Chisinau",
+      "material": "Leather"
+    }
+  },
+  "Metadata-cat": {
+    "title": "| Genuine leather",
+
+      "women": "women",
+      "men": "men",
+      "bags": "bags",
+      "wallets": "wallets",
+      "accessories": "accessories",
+      "keyholder": "keyholder",
+      "umbrella": "umbrella",
+     "description": "Discover the GeantaMea collection of genuine leather accessories. Elegant and durable designs, perfect for business or daily use. Fast delivery in Chisinau and across Moldova.",
+    "openGraph": {
+      "title": "GeantaMea - Leather Bags and Wallets in Moldova",
+      "description": "GeantaMea | Leather bags, wallets and accessories in Moldova",
+      "material": "Leather"
+    }
+
+  },
   "infobar": {
     "sales": "SUPER SALE UP TO 40% OFF",
     "shop-link": "SHOP NOW",
@@ -11,7 +39,7 @@
         "bags": {
           "label": "Bags",
           "view-all": "View All",
-          "handbag": "Handbags",
+          "bags": "bags",
           "clutch": "Clutches",
           "backpack": "Backpacks"
         },
@@ -74,6 +102,9 @@
       }
     }
   },
+  "hero-section": {
+    "info":"Genuine Leather Bags and Wallets in Moldova"
+  },
   "cart": {
     "label": "Cart",
     "empty": "Your cart is empty",
@@ -100,6 +131,8 @@
     "bags": "bags",
     "wallets": "wallets",
     "accessories": "accessories",
+    "keyholder": "keyholder",
+    "umbrella": "umbrella",
     "filter": "filter",
     "items-found": "unități",
     "sort-by": "Sort by:",

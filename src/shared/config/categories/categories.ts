@@ -16,10 +16,10 @@ export const categories = {
     wallets: ["bifold", "card holder", "zip wallet"],
     accessories: ["belt", "scarf", "hat"],
   },
-  accessories: {
-    keyHolder: ["key ring", "key case"],
-    umbrella: ["folding", "straight"],
-  },
+  // accessories: {
+  //   keyholder: ["key ring", "key case"],
+  //   umbrella: ["folding", "straight"],
+  // },
 } as const;
 
 export type Categories = keyof typeof categories;
@@ -36,7 +36,7 @@ export type ItemType<
 
 export type MenSubcategory = Subcategory<"men">;
 export type WomenSubcategory = Subcategory<"women">;
-export type AccessoriesSubcategory = Subcategory<"accessories">;
+// export type AccessoriesSubcategory = Subcategory<"accessories">;
 
 export const isValidCategory = (key: string): key is Categories => {
   return key in categories;

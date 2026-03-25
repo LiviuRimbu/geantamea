@@ -9,15 +9,25 @@ import Link from "next/link";
 interface ProductCardProps {
   id?: string;
   item: ProductItem;
+  locale: string;
 }
 
-export const ProductCardServer = ({ id, item }: ProductCardProps) => {
+export const ProductCardServer = ({ id, item, locale }: ProductCardProps) => {
   const thumbImages = item.images.filter((img) => img.includes("thumb"));
-  console.log(item, "Item from card server");
+  const categoryName = item.ItemType[`name_en` as keyof typeof item.ItemType] || "";
+  const brandName = item.Brand.name_ro || "";
+  const productId = item.id;
+
+  // Curăță spațiile (opțional, dar recomandat pentru URL-uri valide)
+  const cleanCategory = String(categoryName).replace(/\s+/g, '-');
+  const cleanBrand = String(brandName).replace(/\s+/g, '-');
+
+
+
   return (
-    <Link
-      href={`/products/${item.id}`}
-      key={id}
+      <Link
+          href={`/${locale}/products/${cleanCategory}-${cleanBrand}-${productId}`}
+          key={id}
       className="relative w-full h-full"
     >
       <div className="  relative w-full   group aspect-[5/5] overflow-hidden ">

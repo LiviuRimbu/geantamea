@@ -1,17 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { useTranslations } from "next-intl";
 
-import { Button, Checkbox } from "@/shared/ui/shadcn";
 import { TextElement } from "@/shared/ui/";
 import { CatalogFilter } from "@/widgets/catalog/ui/catalog-filter";
 import { CatalogSort } from "@/widgets/catalog/ui/catalog-sort";
-import { ChevronDown } from "lucide-react";
 
 type CatalogToolbarProps = {
   totalItems: number;
-  availableTypes: string[];
+  availableTypes: readonly string[];
   activeFilters: string[];
   onFilterAction: (type: string) => void;
   onResetAction: () => void;
@@ -29,7 +27,6 @@ export const CatalogToolbar = ({
   onSortAction,
 }: CatalogToolbarProps) => {
   const t = useTranslations("catalog");
-  // const [activeSort, setActiveSort] = useState("");
 
   return (
     <div className="relative">

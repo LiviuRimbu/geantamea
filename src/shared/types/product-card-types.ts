@@ -12,6 +12,6 @@ export interface ProductItem {
     name_ro: string;
     name_en: string;
     name_ru: string;
-    name_ukr: string;
+    name_uk: string;
   };
 }

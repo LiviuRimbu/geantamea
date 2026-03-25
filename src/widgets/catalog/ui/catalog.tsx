@@ -18,7 +18,7 @@ export async function Catalog({ category, subcategory }: CatalogProps) {
   const CATEGORIES_MAP: Record<Categories, Gender> = {
     men: Gender.male,
     women: Gender.female,
-    accessories: Gender.unisex,
+    // accessories: Gender.unisex,
   };
   const genderFilter = CATEGORIES_MAP[category as Categories];
 
@@ -57,7 +57,7 @@ export async function Catalog({ category, subcategory }: CatalogProps) {
           name_ro: true,
           name_en: true,
           name_ru: true,
-          name_ukr: true,
+          name_uk: true,
         },
       },
       gender: true,

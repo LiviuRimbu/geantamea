@@ -2,22 +2,18 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "GeantaMea",
-  description: "Your bag store",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://geantamea.md"),
+  title: {
+    template: "%s | GeantaMea",
+    default: "GeantaMea - Magazin articole din Piele",
+  },
+  description: "Accesorii și genți din piele de înaltă calitate.",
 };
 
-export default async function RootLayout({
-  children,
-  // params,
-}: {
+export default function RootLayout({
+                                     children,
+                                   }: {
   children: React.ReactNode;
 }) {
-  // const { locale } = await params;
-
-  return (
-    // <html lang="ro">
-    <html>
-      <body>{children}</body>
-    </html>
-  );
+  return children;
 }

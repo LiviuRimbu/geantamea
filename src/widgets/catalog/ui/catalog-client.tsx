@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useMemo, useState } from "react";
+import {useLocale} from "next-intl";
 
 import { CategoriesSelector } from "@/widgets/catalog";
 import { CatalogToolbar } from "@/widgets/catalog/ui/catalog-toolbar";
@@ -17,6 +18,7 @@ interface CatalogClientProps {
   category: string;
   subcategory: string;
   catalogItems: CatalogItem[];
+
 }
 
 export const CatalogClient = ({
@@ -24,12 +26,13 @@ export const CatalogClient = ({
   subcategory,
   catalogItems,
 }: CatalogClientProps) => {
+  const locale = useLocale()
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
   const [activeSort, setActiveSort] = useState<string>("");
 
   const availableTypes = categories[category as Categories][
     subcategory as Subcategory<Categories>
-  ] as string[];
+  ] as unknown as string[];
 
   const filteredItems =
     activeFilters.length === 0
@@ -80,7 +83,7 @@ export const CatalogClient = ({
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 w-full px-2 mt-5 md:mt-6">
         {shownItems.map((item) => (
           <div key={item.id} className="w-full h-full">
-            <ProductCardServer item={item as ProductItem} />
+            <ProductCardServer item={item as ProductItem} locale={locale} />
           </div>
         ))}
       </div>

@@ -26,6 +26,7 @@ export const CategoriesSelector = ({
           href={`/shop/${category}/${item}`}
           className="shrink-0"
         >
+          {/*{item}*/}
           <UnderlineButton
             buttonKey={item}
             buttonState={subcategory}

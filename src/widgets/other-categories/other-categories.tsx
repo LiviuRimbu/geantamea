@@ -28,10 +28,10 @@ export const OtherCategories = <C extends Categories>({
       wallets: "women-wallets",
       accessories: "women-accessories",
     },
-    accessories: {
-      keyHolder: "keyHolder",
-      umbrella: "umbrella",
-    },
+    // accessories: {
+    //   keyHolder: "keyHolder",
+    //   umbrella: "umbrella",
+    // },
   };
   const otherSubcategories = (
     Object.keys(categories[category]) as Subcategory<C>[]

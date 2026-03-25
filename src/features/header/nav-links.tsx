@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { useScrollLock } from "@/shared/hooks/use-scroll-lock";
 
 import { useTranslations } from "next-intl";
@@ -31,12 +31,7 @@ export const NavLinks = ({ changeColor }: NavLinksProps) => {
     sale: <SaleMenuDesktop />,
     gift: <GiftMenuDesktop />,
   };
-  // console.log(menus.isHovered.href)
-  // useEffect(() => {
-  //   if (isHovered) {
-  //     console.log("menus[item].items->", menus);
-  //   }
-  // }, [isHovered]);
+
 
   return (
     <div className={"flex items-start justify-between h-navbar"}>

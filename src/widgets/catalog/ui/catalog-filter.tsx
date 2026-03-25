@@ -7,7 +7,7 @@ import { TextElement } from "@/shared/ui";
 import React from "react";
 
 type CatalogFilterProps = {
-  availableTypes: string[];
+  availableTypes: readonly string[];
   activeFilters: string[];
   onFilterAction: (type: string) => void;
   onResetAction: () => void;

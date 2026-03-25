@@ -2,6 +2,7 @@
 
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
+import {useRouter} from "next/navigation";
 // import {useTranslations} from "next-intl";
 
 import {z} from "zod";
@@ -11,7 +12,6 @@ import {Input} from "@/shared/ui/shadcn/";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/shared/ui/shadcn";
 import {Textarea} from "@/shared/ui/shadcn/textarea";
 import {createOrder} from "@/features/checkout/actions/checkout";
-import {useRouter} from "next/navigation";
 
 
 export const CheckoutForm = () => {
@@ -45,7 +45,6 @@ export const CheckoutForm = () => {
             cartItems: cartItemsIds
         });
         if (result.success) {
-            console.log(result.customer!.name)
             localStorage.setItem("lastOrder", JSON.stringify({
                 name: result.customer!.name,
                 phone: result.customer!.phone,
@@ -57,6 +56,7 @@ export const CheckoutForm = () => {
             alert(result.error);
         }
     }
+if (cartItems.length === 0) return
 
     return (
         <div>

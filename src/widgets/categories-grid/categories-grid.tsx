@@ -49,7 +49,7 @@ export const CategoriesGrid = async () => {
           </Link>
 
           <Link
-            href="/shop/accessories"
+            href="/shop/women/accessories"
             className="relative w-[350px] md:w-[400px] h-[180px] md:h-[290px] cursor-pointer overflow-hidden flex items-center justify-center"
           >
             <TextElement
