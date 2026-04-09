@@ -2,7 +2,6 @@
   "Metadata": {
     "title": "GeantaMea | Genti si portmonee din piele în Chișinău, Moldova",
     "description": "GeantaMea: genti si portmonee din piele. Livrare gratis în Chișinău și în toată Republica Moldova. Comandă online!",
-
     "openGraph": {
       "title": "GeantaMea - Genti si portmonee din piele în Moldova",
       "description": "Livrare gratuita in Chisinau"
@@ -11,13 +10,13 @@
   "Metadata-cat": {
     "title": "| Piele naturală",
     "description": "Descoperă colecția de accesorii din piele naturală GeantaMea. Modele elegante și rezistente, perfecte pentru birou sau uz zilnic. Livrare rapidă în Chișinău și toată Moldova",
-      "women": "dame",
-      "men": "Bărbați",
-      "bags": "Genți",
-      "wallets": "Portmonee",
-      "accessories": "Accesorii",
-      "keyholder": "portchei",
-      "umbrella": "umbrelă",
+    "women": "dame",
+    "men": "Bărbați",
+    "bags": "Genți",
+    "wallets": "Portmonee",
+    "accessories": "Accesorii",
+    "keyholder": "portchei",
+    "umbrella": "umbrelă",
     "openGraph": {
       "title": "GeantaMea - Genți și portmonee din piele în Moldova",
       "description": "GeantaMea | Genți, portofele și accesorii din piele în Moldova",
@@ -100,7 +99,23 @@
     }
   },
   "hero-section": {
-    "info":"Genți și Portmonee din Piele Naturală în Moldova"
+    "info-part-1": "Genți și Portmonee ",
+    "info-part-2": "din Piele Naturală",
+    "info-part-3": "în Moldova"
+  },
+  "footer": {
+    "links": {
+      "women-bags": "Genți Damă",
+      "women-wallets": "Portmonee Damă",
+      "women-accessories": "Accesorii Damă",
+      "men-bags": "Genți Bărbați",
+      "men-wallets": "Portmonee Bărbați",
+      "men-accessories": "Accesorii Bărbați",
+      "sales": "Reduceri",
+      "gifts": "Carduri Cadou"
+    },
+    "about": "Despre noi",
+    "shipping": "Livrare"
   },
   "cart": {
     "label": "Comanda mea",
@@ -142,5 +157,13 @@
   "checkout": {
     "your-order": "Comanda d-ră",
     "total": "Total"
+  },
+  "success-page": {
+    "text-1": "Mulțumim,",
+    "text-2": "Comanda d-ra a fost plasată cu succes.",
+    "text-3": "Vă vom contacta în scurt timp pentru a confirma comanda pe nr.",
+    "text-4": "Dacă aveți întrebări, ne puteți contacta la info@geantamea.md sau +37379168718",
+    "home-btn": "Continuă cumpărăturile",
+    "shipping-btn": "Informații livrare"
   }
 }

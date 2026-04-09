@@ -48,6 +48,7 @@ export const CheckoutForm = () => {
             localStorage.setItem("lastOrder", JSON.stringify({
                 name: result.customer!.name,
                 phone: result.customer!.phone,
+                lastOrder: cartItems,
             }));
             clearCart();
             // router.push(`/checkout/success?name=${result.customer!.name}&phone=${result.customer!.phone}`);

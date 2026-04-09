@@ -36,11 +36,11 @@ export const NavLinks = ({ changeColor }: NavLinksProps) => {
   return (
     <div className={"flex items-start justify-between h-navbar"}>
       {Object.keys(menus).map((category, index) => (
-        <div key={index} className="flex w-full">
+        <div key={index} className="flex w-full mr-[20px]">
           <TextElement
             variant="descriptionWhite"
             component="span"
-            className={`underline-effect h-navbar !text-[12px] text-center flex lg:items-center lg:justify-center lg:group-hover:text-black mr-4 ${changeColor && "text-black"}`}
+            className={`underline-effect h-navbar !text-[12px] text-center flex lg:items-center lg:justify-center lg:group-hover:text-black mr-4 ${changeColor && "text-black"} `}
             onMouseEnter={() => setIsHovered(category)}
             onMouseLeave={() => setIsHovered(null)}
           >

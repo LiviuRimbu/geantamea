@@ -3,6 +3,7 @@ html {
 /*!*    max-width: 100%;*!*/
 /*!*    overflow-x: hidden;*!*/
 }
+
 body {
     /* Previne scroll-ul orizontal pe orice dispozitiv */
     overflow-x: hidden;
@@ -25,29 +26,6 @@ body {
 @tailwind components;
 @tailwind utilities;
 
-
-.filling-bg {
-    width: 100%;
-    left: 0;
-    top: 0;
-    height: 100%;
-    position: absolute;
-    z-index: 0;
-    /* Make it super slow - 3 seconds */
-    transition: transform 3s ease-in-out;
-}
-
-/* Default state - fully visible */
-.filling-bg.not-hovered {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-/* Hovered state - shrinks from right to left */
-.filling-bg.hovered {
-    transform: scaleX(0);
-    transform-origin: right;
-}
 
 /** { outline: 1px solid red !important; }*/
 

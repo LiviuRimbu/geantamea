@@ -11,23 +11,32 @@ export const MenMenuDesktop = () => {
       {menMenu.items?.map((item, index) => (
         <div key={index} className="flex flex-col items-start">
           {/*<Link key={index} href={menMenu.href}>*/}
-          <TextElement variant="description" className="mb-4 whitespace-nowrap">
-            {t(item.key)}
-            {/*    Group name */}
-          </TextElement>
-          {/*</Link>*/}
-          {item.children?.map((submenu, index) => (
-            <div key={index} className="flex flex-col items-start">
-              <Link href={submenu.href} className="flex flex-col items-start">
+              <Link href={item.href} className="flex flex-col items-start">
                 <TextElement
-                  variant="description"
-                  className="mb-1 text-gray-500 normal-case whitespace-nowrap "
+                  variant="subtitle"
+                  className="mb-1  normal-case whitespace-nowrap "
                 >
-                  {t(submenu.key)}
+                  {t(item.key)}
                 </TextElement>
               </Link>
-            </div>
-          ))}
+
+          {/*<TextElement variant="description" className="mb-4 whitespace-nowrap">*/}
+          {/*  {t(item.key)}*/}
+          {/*  /!*    Group name *!/*/}
+          {/*</TextElement>*/}
+          {/*</Link>*/}
+          {/*{item.children?.map((submenu, index) => (*/}
+          {/*  <div key={index} className="flex flex-col items-start">*/}
+          {/*    <Link href={submenu.href} className="flex flex-col items-start">*/}
+          {/*      <TextElement*/}
+          {/*        variant="description"*/}
+          {/*        className="mb-1 text-gray-500 normal-case whitespace-nowrap "*/}
+          {/*      >*/}
+          {/*        {t(submenu.key)}*/}
+          {/*      </TextElement>*/}
+          {/*    </Link>*/}
+          {/*  </div>*/}
+          {/*))}*/}
         </div>
       ))}
     </div>

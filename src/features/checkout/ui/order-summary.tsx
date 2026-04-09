@@ -6,24 +6,27 @@ import {CartProductCard, useCartStore} from "@/features/cart";
 
 import {TextElement} from "@/shared/ui";
 
-export const OrderSummary = () => {
+interface OrderSummaryProps {
+    variant?: 'cart' | 'success';
+}
+
+export const OrderSummary = ({variant = 'cart'}:OrderSummaryProps) => {
     const t = useTranslations("checkout");
     const cartItems = useCartStore((state) => state.items);
     const cartTotal = useCartStore((state) => state.getTotalPrice);
 
     return (
         <div >
-
             {cartItems.length > 0 ? (<div className="bg-white lg:max-w-[30vw] p-4 m-4">
-                <TextElement variant="subtitle" className=" text-lg">
+                <TextElement  variant="subtitle" className=" text-lg">
                     {t("your-order")}
                 </TextElement>
-                {cartItems.map((cartItem, index) => (
-                    <div className="">
+                {cartItems.map((cartItem) => (
+                    <div key={cartItem.id} className="">
                         <CartProductCard
                             key={cartItem.id}
                             cartItem={cartItem}
-                            // deleteBtn={false}
+                            deleteBtn={variant==="success"}
                         />
                     </div>
                 ))}

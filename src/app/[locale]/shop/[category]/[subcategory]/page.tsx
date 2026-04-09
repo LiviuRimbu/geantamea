@@ -55,8 +55,6 @@ export async function generateMetadata({params}: PageProps): Promise<Metadata> {
   };
 }
 
-
-
 export default async function Page({ params }: PageProps) {
   const { category, subcategory, locale } = await params;
 
@@ -76,9 +74,7 @@ export default async function Page({ params }: PageProps) {
     subcategoryLabel: t(subcategory),
   });
 
-
   return (
-
     <main className="relative lg:mx-containerXlg ">
       <div className="relative h-[400px] w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
         <Image

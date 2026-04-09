@@ -15,6 +15,13 @@ type CatalogToolbarProps = {
   onResetAction: () => void;
   activeSort: string;
   onSortAction: (sort: string) => void;
+  itemsTypes:   {
+    id: number;
+    name_en: string;
+    name_ro: string;
+    name_ru: string;
+    name_uk: string;
+  }[];
 };
 
 export const CatalogToolbar = ({
@@ -25,6 +32,7 @@ export const CatalogToolbar = ({
   onResetAction,
   activeSort,
   onSortAction,
+    itemsTypes
 }: CatalogToolbarProps) => {
   const t = useTranslations("catalog");
 
@@ -36,6 +44,7 @@ export const CatalogToolbar = ({
           activeFilters={activeFilters}
           onFilterAction={onFilterAction}
           onResetAction={onResetAction}
+          itemsTypes={itemsTypes}
         />
 
         <TextElement variant="descriptionWhite" className="text-gray-500">

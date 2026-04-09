@@ -9,3 +9,6 @@ export { CartIcon } from "./cart-icon";
 export { PlusIcon } from "./plus-icon";
 export { FilterIcon } from "./filter-icon";
 export { Check } from "./check";
+export { FacebookIcon } from "./facebook-icon";
+export { InstagramIcon } from "./instagram-icon";
+export { TikTokIcon } from "./tiktok-icon";

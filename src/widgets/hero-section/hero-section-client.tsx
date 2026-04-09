@@ -29,19 +29,37 @@ export const HeroSectionClient = ({heroContent}: HeroSectionClientProps) => {
     }, []);
 
     return (
-        <div className=" relative w-[100%] h-[600px] overflow-hidden bg-black -mt-navbar  ">
+        <div className=" relative w-[100%] h-[90vh] overflow-hidden bg-black -mt-navbar  ">
             {/* Text */}
             <div
-                className=" absolute border-2 border-white top-1/2 left-1/2 h-[340px] w-[340px] lg:w-[435px] -translate-x-1/2 -translate-y-1/2 z-[10] gap-4 flex flex-col items-center justify-around p-4">
+                className=" absolute border border-white top-1/2 left-1/2 h-[340px] w-[340px] lg:w-[435px] -translate-x-1/2 -translate-y-1/2 z-[10] gap-4  items-center  p-4 pt-10 flex flex-col justify-around">
                 {/*<TextElement variant="descriptionWhite" >New collection</TextElement>*/}
+               <h1 className="flex flex-col">
                 <TextElement
                     variant="subtitleWhite"
-                    className="leading-tight whitespace-normal items-start text-[20px]"
-                    component="h1"
+                    className="leading-tight whitespace-normal items-start text-[20px] font-normal tracking-[0.5rem] mb-[15px]"
+                    component="span"
                 >
                     {/*Elegant &amp; Timeless*/}
-                    {t('hero-section.info')}
+                    {t('hero-section.info-part-1')}
                 </TextElement>
+                <TextElement
+                    variant="subtitleWhite"
+                    className="leading-tight whitespace-normal items-start text-[20px]  tracking-[0.5rem] mb-[15px]"
+                    component="span"
+                >
+                    {/*Elegant &amp; Timeless*/}
+                    {t('hero-section.info-part-2')}
+                </TextElement>
+                <TextElement
+                    variant="subtitleWhite"
+                    className="leading-tight whitespace-normal items-start text-[20px]  tracking-[0.5rem] mb-[15px]"
+                    component="span"
+                >
+                    {/*Elegant &amp; Timeless*/}
+                    {t('hero-section.info-part-3')}
+                </TextElement>
+               </h1>
                 <div>
                     <FillingButton
                         color="white"

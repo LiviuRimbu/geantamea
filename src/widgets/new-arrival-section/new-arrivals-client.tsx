@@ -9,7 +9,6 @@ import {TextElement} from "@/shared/ui/text-element";
 import {UnderlineButton} from "@/shared/ui/underline-button";
 import {ProductCardServer} from "@/entities/product/product-card/product-card-server";
 import {ScrollableRow} from "@/shared/ui/scrollable-row";
-import {FillingButton} from "@/shared/ui/filling-button";
 
 import {ProductItem} from "@/shared/types/product-card-types";
 import {FadeSwap} from "@/shared/ui/fade-swap";
@@ -21,7 +20,7 @@ interface NewArrivalsClientProps {
 export const NewArrivalsClient = ({newArrivals}: NewArrivalsClientProps) => {
     const t = useTranslations();
     const locale = useLocale()
-    const router = useRouter();
+    // const router = useRouter();
     const [buttonPressed, setButtonPressed] = useState<string>("women");
 
     const [_visible, setVisible] = useState(true);
@@ -59,38 +58,38 @@ export const NewArrivalsClient = ({newArrivals}: NewArrivalsClientProps) => {
                 </UnderlineButton>
             </div>
             {/*Products*/}
-            <ScrollableRow className="overflow-x-auto  h-auto">
-                <FadeSwap triggerKey={buttonPressed} duration={400}>
-                    <div className="flex flex-row">
+            <FadeSwap triggerKey={buttonPressed} duration={400}>
+                {/* Mobile*/}
+                <div className="md:hidden w-[100vw]">
+                    <ScrollableRow>
                         {newArrivals
                             .filter(
                                 (item) =>
                                     item.gender?.toLowerCase() ===
                                     genderMap[buttonPressed as keyof typeof genderMap],
                             )
-                            .slice(0, 10)
+                            .slice(0, 4)
                             .map((item) => (
-                                <div
-                                    key={item.id}
-                                    // className="relative w-[200px] h-[200px] md:w-[300px] md:h-[400px] cursor-pointer mr-[30px]"
-                                    className="relative cursor-pointer min-w-[150px] flex-auto max-w-[500px]  mr-[30px]"
-                                >
-                                    <ProductCardServer item={item} locale={locale}/>
+                                <div key={item.id} className="flex-none w-[45vw]">
+                                    <ProductCardServer item={item} locale={locale} />
                                 </div>
                             ))}
-                    </div>
-                </FadeSwap>
-            </ScrollableRow>
-            <FadeSwap triggerKey={buttonPressed} duration={400}>
-                <FillingButton color="black" onClickAction={() => {
-                    router.push(`/shop/${buttonPressed}/bags`)
-                }}>
-                    {`${t("new-arrival-section.btn-part1")} ${
-                        buttonPressed === "women"
-                            ? t("navbar.women.label")
-                            : t("navbar.men.label")
-                    } ${t("new-arrival-section.btn-part2")} `}
-                </FillingButton>
+                    </ScrollableRow>
+                </div>
+
+                {/* Desktop: grid */}
+                <div className="hidden md:grid grid-cols-3 lg:grid-cols-4 gap-4 px-2 mt-5 md:mt-6 w-[80vw]">
+                    {newArrivals
+                        .filter(
+                            (item) =>
+                                item.gender?.toLowerCase() ===
+                                genderMap[buttonPressed as keyof typeof genderMap],
+                        )
+                        .slice(0, 4)
+                        .map((item) => (
+                            <ProductCardServer key={item.id} item={item} locale={locale} />
+                        ))}
+                </div>
             </FadeSwap>
         </div>
     );

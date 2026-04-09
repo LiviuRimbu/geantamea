@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { useParams } from "next/navigation";
+// import { useParams } from "next/navigation";
+import { useLocale } from "next-intl";
 
 import { LangSwitcher } from "@/features/header/lang-switcher";
 import { NavLinks } from "@/features/header/nav-links";
@@ -13,6 +14,9 @@ import { BurgerButton } from "@/features/header/burger-button";
 import { NavLinksMobile } from "@/features/header/nav-links-mobile";
 
 export const Navbar = () => {
+  const locale = useLocale();
+
+
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -25,11 +29,11 @@ export const Navbar = () => {
 
   const path = usePathname() || "/";
   const changeColor = dropdownOpen || scrolled || path.length > 5;
-  const params = useParams();
+  // const params = useParams();
 
   return (
     <nav
-      className={` bg-transparent sticky top-0 min-h-navbar h-navbar w-full z-[500] flex justify-center place-items-center  transition-colors duration-400  left-0  hover:bg-white px-9 lg:px-11  text-black group ${changeColor && "bg-white"}`}
+      className={`bg-transparent sticky top-0 min-h-navbar h-navbar w-full z-[500] flex justify-center place-items-center transition-colors duration-400  left-0  hover:bg-white px-9 lg:px-11 mt-[] text-black group ${changeColor && "bg-white"}`}
     >
       <div className="flex justify-between items-center w-full  max-w-[1380px] relative">
         <div className="hidden lg:block">
@@ -49,7 +53,7 @@ export const Navbar = () => {
           />
         </div>
 
-        <Link href="/" className="absolute left-[50%] -translate-x-1/2 ">
+        <Link href={`/${locale}`} className="absolute left-[50%] -translate-x-1/2 ">
           <TextElement
             variant="logo"
             fontFamily="optima"

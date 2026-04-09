@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/shared/lib/utils";
 
 const textElementVariants = cva(
-  " leading-[5rem]  tracking-[0.125rem]  word-space text-center whitespace-nowrap",
+  " leading-[5rem]  tracking-[2.16px]  word-space text-center whitespace-nowrap",
   {
     variants: {
       variant: {
@@ -15,7 +15,9 @@ const textElementVariants = cva(
           "text-[14px] xs:text-[16px] sm:text-[18px] text-black uppercase font-thin",
         subtitleWhite:
           "text-[14px] xs:text-[16px] sm:text-[18px] text-white uppercase font-thin",
-        descriptionWhite: "text-white text-[12px] sm:text-[12px] uppercase",
+        descriptionWhite: "text-white text-[12px] sm:text-[12px] uppercase ",
+        descriptionWhite14: "text-white text-[14px] sm:text-[14px] uppercase ",
+        descriptionBurg14: "text-white text-[14px] sm:text-[14px] uppercase text-[#763224] ",
         description: "  text-black text-[0.625rem] sm:text-[0.75rem] uppercase",
         ghost: "",
       },

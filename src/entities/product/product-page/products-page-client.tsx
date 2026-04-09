@@ -4,8 +4,7 @@ import dynamic from "next/dynamic";
 import { ProductPageInfo } from "@/entities/product/product-page/product-page-info";
 import { Locale, Item } from "@/shared/types";
 import { useIsMobile } from "@/shared/hooks/use-is-mobile";
-import { useEffect } from "react";
-import ScrollSyncExample from "@/entities/product/product-page/test";
+// import { useEffect } from "react";
 
 const ProductPageGallery = dynamic(
   () =>
@@ -43,10 +42,10 @@ export const ProductPageClient = ({
 
   return (
     <div className="flex gap-6 justify-center items-center  flex-col  w-full mt-containerYtop">
-      <div className="flex items-start justify-center flex-col lg:flex-row">
+      <div className="flex items-start justify-center flex-col lg:flex-row gap-4 ">
         <ProductPageGallery
           sortedImages={sortedImages}
-          direction={isMobile ? "horizontal" : "vertical"}
+          // direction={isMobile ? "horizontal" : "vertical"}
         />
         {/*<ScrollSyncExample />*/}
         <ProductPageInfo item={item} locale={locale} />

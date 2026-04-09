@@ -21,7 +21,7 @@ module.exports = {
       },
       spacing: {
         "wide-words": "50rem",
-        navbar: "60px",
+        navbar: "82px",
         containerX: "2.25rem",
         containerXlg: "2.75rem",
         containerYtop: "3rem",
@@ -74,7 +74,7 @@ module.exports = {
         },
       },
       height: {
-        navbar: "60px",
+        navbar: "82px",
       },
       transitionDuration: {
         500: "500ms",

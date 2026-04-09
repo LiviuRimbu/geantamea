@@ -26,6 +26,12 @@ export const HomePage = () => {
       {/*<HeroSection />*/}
       <NewArrivalsSection />
       <CategoriesGrid />
+    {/*    Our Favorites*/}
+    {/*    Leather care*/}
+    {/*    Value Proposition Icons*/}
+    {/*    */}
+    {/*    */}
+    {/*  The Footer / -About us, Contact,  Copyright line, gifts, livrare, instagram/facebook  */}
     </div>
   );
 };

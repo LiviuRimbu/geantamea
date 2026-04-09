@@ -1,23 +1,27 @@
 'use client'
 import { useEffect, useState } from "react";
 
-export function useTextRotator(messages: string[], interval = 3000) {
+export function useTextRotator(messages: string[], interval = 5000, fadeGap = 800) {
     const [index, setIndex] = useState(0);
     const [fade, setFade] = useState(true);
 
     useEffect(() => {
         if (messages.length <= 1) return;
-        const timeout = setTimeout(() => setFade(false), interval - 300); // Start fade-out 300ms before change
-        const timer = setTimeout(() => {
+
+        // Fade out just before the interval ends
+        const fadeOut = setTimeout(() => setFade(false), interval - fadeGap);
+
+        // Swap message and fade back in
+        const swap = setTimeout(() => {
             setIndex((prev) => (prev + 1) % messages.length);
-            setFade(true); // Fade in new message
+            setFade(true);
         }, interval);
 
         return () => {
-            clearTimeout(timeout);
-            clearTimeout(timer);
+            clearTimeout(fadeOut);
+            clearTimeout(swap);
         };
-    }, [index, messages, interval]);
+    }, [index, messages.length, interval, fadeGap]);
 
     return { message: messages[index], fade };
 }

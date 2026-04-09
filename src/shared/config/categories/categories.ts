@@ -1,4 +1,5 @@
 export const categories = {
+  //After adding a new item type in dashboard needs to add it here
   men: {
     bags: [
       "handbag",
@@ -13,7 +14,7 @@ export const categories = {
   },
   women: {
     bags: ["handbag", "shoulder bag", "clutch", "tote", "Geantă crossbody"],
-    wallets: ["bifold", "card holder", "zip wallet"],
+    wallets: ["bifold", "card holder", "zip wallet", "wallet"],
     accessories: ["belt", "scarf", "hat"],
   },
   // accessories: {

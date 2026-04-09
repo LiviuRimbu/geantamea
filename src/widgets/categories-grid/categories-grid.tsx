@@ -9,7 +9,7 @@ export const CategoriesGrid = async () => {
 
   return (
     <div className="mb-[300px]  mt-[48px] md:mt-[80px] flex items-center justify-center ">
-      <div className="flex flex-col gap-[20px] md:flex-row md:gap-[30px]">
+      <div className="flex flex-col gap-[20px] lg:flex-row md:gap-[30px]">
         <Link
           href="/shop/women/bags"
           className="w-[350px] md:w-[830px] h-[384px] md:h-[610px] overflow-hidden flex items-center justify-center group relative"

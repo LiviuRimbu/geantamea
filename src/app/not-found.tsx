@@ -18,7 +18,7 @@ export default function NotFound() {
 
           <div className="mt-8">
             <Link
-              href="/"
+                href='/'
               className="inline-block px-6 py-3 bg-black text-white hover:bg-white hover:text-black transition-colors"
             >
               Pagina principală

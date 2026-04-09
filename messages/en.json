@@ -2,7 +2,6 @@
   "Metadata": {
     "title": "GeantaMea | Leather Bags and Wallets in Chisinau, Moldova",
     "description": "GeantaMea: leather bags and wallets. Fast delivery in Chisinau and across the Republic of Moldova. Order online!",
-
     "openGraph": {
       "title": "GeantaMea - Leather Bags and Wallets in Moldova",
       "description": "Fast delivery in Chisinau",
@@ -11,21 +10,19 @@
   },
   "Metadata-cat": {
     "title": "| Genuine leather",
-
-      "women": "women",
-      "men": "men",
-      "bags": "bags",
-      "wallets": "wallets",
-      "accessories": "accessories",
-      "keyholder": "keyholder",
-      "umbrella": "umbrella",
-     "description": "Discover the GeantaMea collection of genuine leather accessories. Elegant and durable designs, perfect for business or daily use. Fast delivery in Chisinau and across Moldova.",
+    "women": "women",
+    "men": "men",
+    "bags": "bags",
+    "wallets": "wallets",
+    "accessories": "accessories",
+    "keyholder": "keyholder",
+    "umbrella": "umbrella",
+    "description": "Discover the GeantaMea collection of genuine leather accessories. Elegant and durable designs, perfect for business or daily use. Fast delivery in Chisinau and across Moldova.",
     "openGraph": {
       "title": "GeantaMea - Leather Bags and Wallets in Moldova",
       "description": "GeantaMea | Leather bags, wallets and accessories in Moldova",
       "material": "Leather"
     }
-
   },
   "infobar": {
     "sales": "SUPER SALE UP TO 40% OFF",
@@ -103,7 +100,23 @@
     }
   },
   "hero-section": {
-    "info":"Genuine Leather Bags and Wallets in Moldova"
+    "info-part-1": "Genuine Leather ",
+    "info-part-2": "Bags and Wallets",
+    "info-part-3": "in Moldova"
+  },
+  "footer": {
+    "links": {
+      "women-bags": "Women Bags",
+      "women-wallets": "Women Wallets",
+      "women-accessories": "Women Accessories",
+      "men-bags": "Men Bags",
+      "men-wallets": "Men Wallets",
+      "men-accessories": "Men Accessories",
+      "sales": "Sales",
+      "gifts": "Gift Cards"
+    },
+    "about": "About",
+    "shipping": "Shipping"
   },
   "cart": {
     "label": "Cart",
@@ -143,7 +156,15 @@
     }
   },
   "checkout": {
-    "your-order" : "Your order",
-    "total" : "Total"
+    "your-order": "Your order",
+    "total": "Total"
+  },
+  "success-page": {
+    "text-1": "Thank you,",
+    "text-2": "Your order has been placed successfully.",
+    "text-3": "We will contact you shortly to confirm your order at",
+    "text-4": "If you have any questions, contact us at info@geantamea.md or +37379168718",
+    "home-btn": "Continue shopping",
+    "shipping-btn": "Shipping info"
   }
 }

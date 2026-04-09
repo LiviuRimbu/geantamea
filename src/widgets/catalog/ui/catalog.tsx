@@ -26,7 +26,7 @@ export async function Catalog({ category, subcategory }: CatalogProps) {
     category as Categories,
     subcategory as Subcategory<Categories>,
   );
-
+// console.log (genderFilter,"*****************", acceptedTypes)
   const itemsByCategory = await prisma.item.findMany({
     where: {
       hidden: false,
@@ -68,12 +68,19 @@ export async function Catalog({ category, subcategory }: CatalogProps) {
     ...item,
     price: item.price.toNumber(),
   }));
-
+  const itemsTypes = Object.values(
+      Object.fromEntries(
+          itemsByCategory
+              .filter((item) => item.ItemType)
+              .map((item) => [item.ItemType!.id, item.ItemType!])
+      )
+  );
   return (
     <CatalogClient
       catalogItems={catalogItems}
       category={category}
       subcategory={subcategory}
+      itemsTypes={itemsTypes}
     />
   );
 }

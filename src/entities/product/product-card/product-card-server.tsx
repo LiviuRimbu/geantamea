@@ -18,7 +18,6 @@ export const ProductCardServer = ({ id, item, locale }: ProductCardProps) => {
   const brandName = item.Brand.name_ro || "";
   const productId = item.id;
 
-  // Curăță spațiile (opțional, dar recomandat pentru URL-uri valide)
   const cleanCategory = String(categoryName).replace(/\s+/g, '-');
   const cleanBrand = String(brandName).replace(/\s+/g, '-');
 

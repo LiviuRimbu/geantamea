@@ -8,6 +8,7 @@ import {Navbar} from "@/features/header/navbar";
 import {InfoBar} from "@/features/header/info-bar";
 import {Locale} from "@/shared/types";
 import { buildHomeJsonLd } from '@/shared/lib/seo/';
+import {Footer} from "@/widgets/footer";
 
 // import {Header} from "@/features/header/header";
 
@@ -84,7 +85,7 @@ export default async function LocaleLayout({
     const jsonLd = buildHomeJsonLd();
     return (
         <html lang={locale}>
-        <body className="min-h-screen bg-white antialiased">
+        <body className="min-h-screen antialiased">
         <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}}
@@ -93,6 +94,7 @@ export default async function LocaleLayout({
             <InfoBar/>
             <Navbar/>
             <main className="">{children}</main>
+            <Footer />
         </NextIntlClientProvider>
         </body>
         </html>
